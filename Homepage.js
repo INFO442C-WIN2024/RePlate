@@ -13,7 +13,7 @@ const HomePage = () => {
     {
       id: 2,
       name: "Korean Tofu House",
-      image: "https://images.seattletimes.com/wp-content/uploads/2024/09/09062024_kent_1306272.jpg?d=780x585",
+      image: "https://s3-media0.fl.yelpcdn.com/bphoto/0MrlQ4w_mH-nqbNXEJYONw/348s.jpg",
       description: "Delicious Korean meals.",
       location: "4350 University Ave, Seattle",
     },
