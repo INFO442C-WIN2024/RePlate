@@ -20,7 +20,7 @@ const HomePage = () => {
     {
       id: 3,
       name: "Sumo Express Sushi",
-      image: "https://images.seattletimes.com/wp-content/uploads/2024/09/09062024_kent_1306272.jpg?d=780x585",
+      image: "https://s3-media0.fl.yelpcdn.com/bphoto/4SOg_Ka6z9GI6E569EirWA/348s.jpg",
       description: "Delicious sushi.",
       location: "4350 University Ave, Seattle",
     },
