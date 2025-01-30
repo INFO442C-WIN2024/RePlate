@@ -63,3 +63,43 @@ body {
     color: #ff7043;
   }
   
+  .search-bar {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 20px auto;
+    display: block;
+    border: 2px solid #ff7043;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .like-button {
+    background-color: #ff7043;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .like-button:hover {
+    background-color: #e64a19;
+  }
+  
+  .location {
+    font-weight: bold;
+    color: #ff7043;
+    text-decoration: none;
+    display: block;
+    margin-top: 5px;
+  }
+  
+  .location:hover {
+    text-decoration: underline;
+  }
+  
