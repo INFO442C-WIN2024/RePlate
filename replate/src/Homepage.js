@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Fuse from "fuse.js";
 import "./Homepage.css";
 
 const HomePage = () => {
@@ -8,6 +9,8 @@ const HomePage = () => {
   };
 
   const [likes, setLikes] = useState(getInitialLikes);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [filteredRestaurants, setFilteredRestaurants] = useState([]);
 
   const restaurants = [
     { id: 1, name: "Shawarma King", image: "https://images.seattletimes.com/wp-content/uploads/2024/09/09062024_kent_1306272.jpg?d=780x585", description: "Delicious middle-eastern meals.", location: "4350 University Ave, Seattle" },
@@ -17,15 +20,27 @@ const HomePage = () => {
     { id: 5, name: "Manoushe Express", image: "https://images.seattletimes.com/wp-content/uploads/2024/09/09062024_kent_1306272.jpg?d=780x585", description: "Delicious middle-eastern meals.", location: "4350 Roosevelt Ave, Seattle" },
   ];
 
+  useEffect(() => {
+    const fuse = new Fuse(restaurants, {
+      keys: ["name"],
+      threshold: 0.3,
+    });
+
+    if (searchQuery.trim()) {
+      const results = fuse.search(searchQuery);
+      setFilteredRestaurants(results.map(result => result.item));
+    } else {
+      setFilteredRestaurants(restaurants);
+    }
+  }, [searchQuery]);
+
   const handleLike = (id) => {
     setLikes((prevLikes) => {
       const updatedLikes = {
         ...prevLikes,
         [id]: (prevLikes[id] || 0) + 1,
       };
-
       localStorage.setItem("restaurantLikes", JSON.stringify(updatedLikes));
-
       return updatedLikes;
     });
   };
@@ -40,8 +55,17 @@ const HomePage = () => {
         <h1>Food Rescue</h1>
         <p>Order delicious food while reducing waste!</p>
       </header>
+
+      <input
+        type="text"
+        className="search-bar"
+        placeholder="Search restaurants..."
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+      />
+
       <div className="restaurant-list">
-        {restaurants.map((restaurant) => (
+        {filteredRestaurants.map((restaurant) => (
           <div className="restaurant-card" key={restaurant.id}>
             <img src={restaurant.image} alt={`${restaurant.name}`} />
             <h2>{restaurant.name}</h2>
