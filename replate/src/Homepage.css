@@ -1,105 +1,118 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f8f8;
-  }
-  
-  .homepage {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .header {
-    background-color: #ff7043;
-    color: white;
-    padding: 20px 0;
-    margin-bottom: 20px;
-  }
-  
-  .header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-  }
-  
-  .header p {
-    margin: 5px 0 0;
-    font-size: 1.2rem;
-  }
-  
-  .restaurant-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .restaurant-card {
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    padding: 20px;
-    text-align: left;
-  }
-  
-  .restaurant-card img {
-    width: 100%;
-    border-radius: 8px;
-  }
-  
-  .restaurant-card h2 {
-    margin: 10px 0;
-    font-size: 1.5rem;
-  }
-  
-  .restaurant-card p {
-    margin: 5px 0;
-    color: #555;
-  }
-  
-  .location {
-    font-weight: bold;
-    color: #ff7043;
-  }
-  
-  .search-bar {
-    width: 80%;
-    max-width: 400px;
-    padding: 10px;
-    margin: 20px auto;
-    display: block;
-    border: 2px solid #ff7043;
-    border-radius: 5px;
-    font-size: 1rem;
-    text-align: center;
-  }
-  
-  .like-button {
-    background-color: #ff7043;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .like-button:hover {
-    background-color: #e64a19;
-  }
-  
-  .location {
-    font-weight: bold;
-    color: #ff7043;
-    text-decoration: none;
-    display: block;
-    margin-top: 5px;
-  }
-  
-  .location:hover {
-    text-decoration: underline;
-  }
-  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+.homepage {
+  text-align: center;
+  padding: 20px;
+}
+
+.header {
+  background-color: #ff7043;
+  color: white;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.header p {
+  margin: 5px 0 0;
+  font-size: 1.2rem;
+}
+
+.restaurant-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.restaurant-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  padding: 20px;
+  text-align: left;
+}
+
+.restaurant-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.restaurant-card h2 {
+  margin: 10px 0;
+  font-size: 1.5rem;
+}
+
+.restaurant-card p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.location {
+  font-weight: bold;
+  color: #ff7043;
+}
+
+.search-bar {
+  width: 80%;
+  max-width: 400px;
+  padding: 10px;
+  margin: 20px auto;
+  display: block;
+  border: 2px solid #ff7043;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.like-button {
+  background-color: #ff7043;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.like-button:hover {
+  background-color: #e64a19;
+}
+
+.location {
+  font-weight: bold;
+  color: #ff7043;
+  text-decoration: none;
+  display: block;
+  margin-top: 5px;
+}
+
+.location:hover {
+  text-decoration: underline;
+}
+
+.login-button {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  background: none !important;
+  border: none;
+  padding: 0 !important;
+  font-family: arial, sans-serif;
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 20px;
+}

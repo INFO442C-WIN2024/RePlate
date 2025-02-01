@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Fuse from "fuse.js";
 import "./Homepage.css";
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
   const getInitialLikes = () => {
@@ -54,6 +55,9 @@ const HomePage = () => {
       <header className="header">
         <h1>Food Rescue</h1>
         <p>Order delicious food while reducing waste!</p>
+        <Link to="/login">
+          <button className="login-button">Sign-in</button>
+        </Link>
       </header>
 
       <input
