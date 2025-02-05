@@ -1,0 +1,64 @@
+.filter-container {
+  position: sticky;
+  top: 0;
+  background-color: var(--background-color);
+  padding: 15px 0;
+  border-bottom: 1px solid var(--border-color);
+  z-index: 100;
+}
+
+.filter-section, .dietary-section {
+  margin-bottom: 10px;
+}
+
+.filter-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 0 20px;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.filter-scroll::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.filter-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  background-color: var(--card-background);
+  color: var(--text-color);
+  font-size: 14px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+.filter-button.active {
+  background-color: #ff3008;
+  color: white;
+  border-color: #ff3008;
+}
+
+.filter-icon {
+  font-size: 18px;
+}
+
+.dietary-section .filter-button {
+  background-color: var(--card-background);
+}
+
+.dietary-section .filter-button.active {
+  background-color: #22c55e;
+  border-color: #22c55e;
+} 
