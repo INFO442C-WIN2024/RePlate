@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { restaurants } from './data/restaurants';
 import { useCart } from './context/CartContext';
+import ThemeToggle from './components/ThemeToggle';
 import './RestaurantPage.css';
 
 const RestaurantPage = () => {
@@ -53,6 +54,7 @@ const RestaurantPage = () => {
           ))}
         </div>
       </div>
+      <ThemeToggle />
     </div>
   );
 };

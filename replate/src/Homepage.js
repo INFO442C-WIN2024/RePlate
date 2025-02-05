@@ -1,87 +1,110 @@
-import React, { useState, useEffect } from "react";
-import Fuse from "fuse.js";
-import "./Homepage.css";
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { restaurants } from './data/restaurants';
+import { useSavedStores } from './context/SavedStoresContext';
+import ThemeToggle from './components/ThemeToggle';
+import FilterBar from './components/FilterBar';
+import './Homepage.css';
 
 const HomePage = () => {
-  const getInitialLikes = () => {
-    const savedLikes = localStorage.getItem("restaurantLikes");
-    return savedLikes ? JSON.parse(savedLikes) : {};
-  };
+  const [selectedFilters, setSelectedFilters] = useState([]);
+  const [searchQuery, setSearchQuery] = useState('');
+  const { savedStores, toggleSavedStore, isStoreSaved } = useSavedStores();
 
-  const [likes, setLikes] = useState(getInitialLikes);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [filteredRestaurants, setFilteredRestaurants] = useState([]);
-
-  const restaurants = [
-    { id: 1, name: "Shawarma King", image: "https://images.seattletimes.com/wp-content/uploads/2024/09/09062024_kent_1306272.jpg?d=780x585", description: "Delicious middle-eastern meals.", location: "4350 University Ave, Seattle" },
-    { id: 2, name: "Korean Tofu House", image: "https://s3-media0.fl.yelpcdn.com/bphoto/0MrlQ4w_mH-nqbNXEJYONw/348s.jpg", description: "Delicious Korean meals.", location: "4350 University Ave, Seattle" },
-    { id: 3, name: "Sumo Express Sushi", image: "https://s3-media0.fl.yelpcdn.com/bphoto/4SOg_Ka6z9GI6E569EirWA/348s.jpg", description: "Delicious sushi.", location: "4350 University Ave, Seattle" },
-    { id: 4, name: "Halal Smash Burger", image: "https://images.seattletimes.com/wp-content/uploads/2024/09/09062024_kent_1306272.jpg?d=780x585", description: "Delicious burgers.", location: "4350 Roosevelt Ave, Seattle" },
-    { id: 5, name: "Manoushe Express", image: "https://images.seattletimes.com/wp-content/uploads/2024/09/09062024_kent_1306272.jpg?d=780x585", description: "Delicious middle-eastern meals.", location: "4350 Roosevelt Ave, Seattle" },
-  ];
-
-  useEffect(() => {
-    const fuse = new Fuse(restaurants, {
-      keys: ["name"],
-      threshold: 0.3,
-    });
-
-    if (searchQuery.trim()) {
-      const results = fuse.search(searchQuery);
-      setFilteredRestaurants(results.map(result => result.item));
-    } else {
-      setFilteredRestaurants(restaurants);
-    }
-  }, [searchQuery]);
-
-  const handleLike = (id) => {
-    setLikes((prevLikes) => {
-      const updatedLikes = {
-        ...prevLikes,
-        [id]: (prevLikes[id] || 0) + 1,
-      };
-      localStorage.setItem("restaurantLikes", JSON.stringify(updatedLikes));
-      return updatedLikes;
+  const handleFilterChange = (filterId) => {
+    setSelectedFilters(prev => {
+      if (prev.includes(filterId)) {
+        return prev.filter(f => f !== filterId);
+      }
+      return [...prev, filterId];
     });
   };
 
-  const getGoogleMapsUrl = (location) => {
-    return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`;
-  };
+  const filteredRestaurants = restaurants.filter(restaurant => {
+    const matchesSearch = restaurant.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         restaurant.description.toLowerCase().includes(searchQuery.toLowerCase());
+    
+    const matchesFilters = selectedFilters.length === 0 || selectedFilters.some(filter => 
+      restaurant.categories.map(c => c.toLowerCase()).includes(filter.toLowerCase()) ||
+      restaurant.dietary.map(d => d.toLowerCase()).includes(filter.toLowerCase())
+    );
+
+    return matchesSearch && matchesFilters;
+  });
+
+  const savedRestaurants = restaurants.filter(restaurant => 
+    savedStores.includes(restaurant.id)
+  );
+
+  const RestaurantCard = ({ restaurant }) => (
+    <Link to={`/restaurant/${restaurant.id}`} className="restaurant-link">
+      <div className="restaurant-card">
+        <div className="restaurant-image-container">
+          <img src={restaurant.image} alt={restaurant.name} />
+          <button 
+            className={`save-button ${isStoreSaved(restaurant.id) ? 'saved' : ''}`}
+            onClick={(e) => {
+              e.preventDefault();
+              toggleSavedStore(restaurant.id);
+            }}
+          >
+            {isStoreSaved(restaurant.id) ? '❤️' : '🤍'}
+          </button>
+        </div>
+        <h2>{restaurant.name}</h2>
+        <p>{restaurant.description}</p>
+        <div className="restaurant-tags">
+          {restaurant.categories.map((category, index) => (
+            <span key={index} className="tag">{category}</span>
+          ))}
+          {restaurant.dietary.map((diet, index) => (
+            <span key={`diet-${index}`} className="tag dietary">{diet}</span>
+          ))}
+        </div>
+        <p className="location">📍 {restaurant.location}</p>
+      </div>
+    </Link>
+  );
 
   return (
     <div className="homepage">
-      <header className="header">
-        <h1>Food Rescue</h1>
-        <p>Order delicious food while reducing waste!</p>
-        <Link to="/login">
-          <button className="login-button">Sign-in</button>
-        </Link>
-      </header>
+      <ThemeToggle />
+      <h1 className="site-title">Replate</h1>
+      
+      <div className="search-container">
+        <input
+          type="text"
+          placeholder="Search for restaurants..."
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          className="search-input"
+        />
+        <span className="search-icon">🔍</span>
+      </div>
 
-      <input
-        type="text"
-        className="search-bar"
-        placeholder="Search restaurants..."
-        value={searchQuery}
-        onChange={(e) => setSearchQuery(e.target.value)}
+      <FilterBar 
+        selectedFilters={selectedFilters} 
+        onFilterChange={handleFilterChange}
       />
 
-      <div className="restaurant-list">
-        {filteredRestaurants.map((restaurant) => (
-          <div className="restaurant-card" key={restaurant.id}>
-            <img src={restaurant.image} alt={`${restaurant.name}`} />
-            <h2>{restaurant.name}</h2>
-            <p>{restaurant.description}</p>
-            <a href={getGoogleMapsUrl(restaurant.location)} target="_blank" rel="noopener noreferrer" className="location">
-              📍 {restaurant.location}
-            </a>
-            <button className="like-button" onClick={() => handleLike(restaurant.id)}>
-              ❤️ Like {likes[restaurant.id] || 0}
-            </button>
+      {savedRestaurants.length > 0 && (
+        <div className="saved-stores-section">
+          <h2>Saved Stores</h2>
+          <div className="restaurant-list">
+            {savedRestaurants.map((restaurant) => (
+              <RestaurantCard key={restaurant.id} restaurant={restaurant} />
+            ))}
           </div>
-        ))}
+        </div>
+      )}
+
+      <div className="all-restaurants-section">
+        <h2>All Restaurants</h2>
+        <div className="restaurant-list">
+          {filteredRestaurants.map((restaurant) => (
+            <RestaurantCard key={restaurant.id} restaurant={restaurant} />
+          ))}
+        </div>
       </div>
     </div>
   );
