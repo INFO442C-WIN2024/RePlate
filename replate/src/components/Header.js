@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
+/*import MapView from './MapView'; */
 import './Header.css';
 
 const Header = () => {
@@ -14,13 +15,15 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header-content">
-        <Link to="/" className="logo">
-          Replate
-        </Link>
-        
+        <div className="left-aligned">
+          <Link to="/" className="logo-button">
+            Replate
+          </Link>
+        </div>
+
         <div className="header-right">
-          <Link 
-            to={isMapView ? "/" : "/map"} 
+          <Link
+            to={isMapView ? "/" : "/map"}
             className="view-toggle-button"
           >
             {isMapView ? "📋 List View" : "🗺️ Map View"}
@@ -28,9 +31,9 @@ const Header = () => {
           <Link to="/cart" className="cart-button">
             🛒 Cart ({cart?.length || 0})
           </Link>
-          <button className="sign-in-button">
+          <Link to="/login" className="sign-in-button">
             Sign In
-          </button>
+          </Link>
         </div>
       </div>
     </header>

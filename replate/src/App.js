@@ -7,11 +7,11 @@ import LoginPage from "./Loginpage";
 import SignupForm from "./SignupPage";
 import AccountCreated from "./AccountCreated";
 import BusinessAccountCreated from "./AccountCreatedBusiness";
-import Welcome from "./WelcomePage";
 import BusinessLoginPage from "./BusinessLoginPage";
 import BusinessSignUp from "./BusinessCreateAccount";
 import RestaurantPage from './RestaurantPage';
 import Cart from './components/Cart';
+import Map from './components/MapView';
 
 
 function App() {
@@ -21,12 +21,12 @@ function App() {
         <CartProvider>
           <Router>
             <Routes>
-              <Route path="/" element={<Welcome />} />
-              <Route path="/homepage" element={<HomePage />} />
+              <Route path="/" element={<HomePage />} />
               <Route path="/login" element={<LoginPage />} />
               <Route path="/businesslogin" element={<BusinessLoginPage />} />
               <Route path="/restaurant/:id" element={<RestaurantPage />} />
               <Route path="/cart" element={<Cart />} />
+              <Route path="/map" element={<Map />} />
               <Route path="/signup" element={<SignupForm />} />
               <Route path="/businesssignup" element={<BusinessSignUp />} />
               <Route path="/accountcreated" element={<AccountCreated />} />

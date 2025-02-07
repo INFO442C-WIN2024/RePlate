@@ -3,6 +3,8 @@ import { useParams, Link } from 'react-router-dom';
 import { restaurants } from './data/restaurants';
 import { useCart } from './context/CartContext';
 import ThemeToggle from './components/ThemeToggle';
+import Header from './components/Header';
+import './components/Header.css';
 import './RestaurantPage.css';
 
 const RestaurantPage = () => {
@@ -19,10 +21,7 @@ const RestaurantPage = () => {
   return (
     <div className="restaurant-page">
       <div className="header-nav">
-        <Link to="/homepage" className="back-button">← Back to Home</Link>
-        <Link to="/cart" className="cart-button">
-          🛒 Cart ({cart.length})
-        </Link>
+        <Header />
       </div>
 
       <div className="restaurant-header">
@@ -58,5 +57,10 @@ const RestaurantPage = () => {
     </div>
   );
 };
+
+/* <Link to="/" className="back-button">← Back to Home</Link>
+<Link to="/cart" className="cart-button">
+  🛒 Cart ({cart.length})
+</Link> */
 
 export default RestaurantPage; 
