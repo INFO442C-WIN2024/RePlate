@@ -1,11 +1,11 @@
 import React from 'react';
 import "./Loginpage.css";
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 
 
-function LoginForm() {
+function SignupForm() {
 
 
     const navigate = useNavigate();
@@ -15,15 +15,22 @@ function LoginForm() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        const email = event.target.elements.email;
         const username = event.target.elements.username;
         const password = event.target.elements.password;
+        const repeatpassword = event.target.elements.repeatpassword;
 
 
 
 
-        if (username.checkValidity() && password.checkValidity()) {
+
+
+        if (username.checkValidity() && password.checkValidity()
+            && email.checkValidity() && repeatpassword.checkValidity()) {
+
+
             alert('Form submitted successfully!');
-            navigate('/homepage'); // Redirect to the success page
+            navigate('/login'); // Redirect to the success page
         } else {
             alert('Please fill out both required fields.');
         }
@@ -35,30 +42,22 @@ function LoginForm() {
             <div className="login-container">
                 <h2 className="login-heading">Sign-in</h2>
                 <form onSubmit={handleSubmit}>
+                    <label htmlFor="email"></label>
+                    <input type="email" id="email" placeholder="E-mail" required />
                     <label htmlFor="username"></label>
                     <input type="text" id="username" placeholder="Username" required />
                     <label htmlFor="password"></label>
                     <input type="password" id="password" placeholder="Password" required />
-                    <div>
-                        <input type="checkbox" id="remember" className="checkbox" />
-                        <label htmlFor="remember">Remember Me</label>
-                    </div>
-                    <button type="submit">Login</button>
-
-
+                    <label htmlFor="repeatpassword"></label>
+                    <input type="password" id="repeatpassword" placeholder="Repeat Password" required />
+                    <button type="submit">Create an Account</button>
                 </form>
-                <a href="#">Forgot Password?</a>
-                <Link to="/signup">
-                    <button className="signup-button">Create an Account</button>
-                </Link>
             </div>
         </div>
-
-
     );
 };
 
 
 
 
-export default LoginForm;
+export default SignupForm;

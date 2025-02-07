@@ -1,11 +1,13 @@
 import React from 'react';
 import "./Loginpage.css";
+/*import "./SignupPage";
+import "./Homepage"; */
 import { useNavigate, Link } from 'react-router-dom';
 
 
 
 
-function LoginForm() {
+function BusinessLoginForm() {
 
 
     const navigate = useNavigate();
@@ -48,17 +50,23 @@ function LoginForm() {
 
                 </form>
                 <a href="#">Forgot Password?</a>
-                <Link to="/signup">
-                    <button className="signup-button">Create an Account</button>
+                <Link to="/businesssignup">
+                    <button className="signup-button">Create a Storefront</button>
                 </Link>
             </div>
         </div>
 
 
+        /*<Link to="/homepage">
+            <button type="submit">Login</button>
+        </Link> */
+
+
+
+
+
+
     );
 };
 
-
-
-
-export default LoginForm;
+export default BusinessLoginForm;

@@ -9,10 +9,7 @@
     font-family: Arial, sans-serif;
 }
 
-
-
-
-.login-container {
+.signup-container {
     font-family: Arial, sans-serif;
     width: 300px;
     padding: 20px;
@@ -22,35 +19,19 @@
     text-align: center;
 }
 
-
-
-
-.loginpage {
-    text-align: center;
-    padding: 20px;
-}
-
-
-
-
-.login-heading {
+.signup-heading {
     background-color: #ff7043;
     color: white;
     padding: 15px;
     text-align: center;
     margin-bottom: 15px;
+    font-size: 15px;
 }
-
-
-
 
 input {
     padding: 5px;
     margin: 5px;
 }
-
-
-
 
 button {
     color: #fefefe;
@@ -61,34 +42,4 @@ button {
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
-}
-
-
-
-
-.signup-button {
-    background: none !important;
-    border: none;
-    padding: 0 !important;
-    font-family: arial, sans-serif;
-    color: blue;
-    text-decoration: underline;
-    cursor: pointer;
-    font-size: 15px;
-}
-
-
-a {
-    color: blue;
-}
-
-
-.checkbox {
-    color: black;
-}
-
-
-label {
-    color: black;
-    font-size: 12px;
 }

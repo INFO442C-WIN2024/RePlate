@@ -8,7 +8,7 @@ import './RestaurantPage.css';
 const RestaurantPage = () => {
   const { id } = useParams();
   const { cart, addToCart } = useCart();
-  
+
   // Find the restaurant data based on the id
   const restaurant = restaurants.find(r => r.id === parseInt(id));
 
@@ -19,12 +19,12 @@ const RestaurantPage = () => {
   return (
     <div className="restaurant-page">
       <div className="header-nav">
-        <Link to="/" className="back-button">← Back to Home</Link>
+        <Link to="/homepage" className="back-button">← Back to Home</Link>
         <Link to="/cart" className="cart-button">
           🛒 Cart ({cart.length})
         </Link>
       </div>
-      
+
       <div className="restaurant-header">
         <img src={restaurant.image} alt={restaurant.name} className="restaurant-image" />
         <div className="restaurant-info">
@@ -44,7 +44,7 @@ const RestaurantPage = () => {
                 <p>{item.description}</p>
                 <span className="price">${item.price.toFixed(2)}</span>
               </div>
-              <button 
+              <button
                 className="add-to-cart"
                 onClick={() => addToCart(item, restaurant.id)}
               >

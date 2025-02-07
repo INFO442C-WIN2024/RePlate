@@ -1,0 +1,31 @@
+.welcome-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+.welcome-title {
+    color: black;
+}
+
+.description {
+    color: black;
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.links {
+    margin-top: 20px;
+}
+
+.links a {
+    margin: 10px;
+    text-decoration: none;
+    color: blue;
+    font-size: 18px;
+}
