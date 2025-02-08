@@ -1,94 +1,136 @@
+/* General styles */
 .full-page-container {
-    height: 100vh;
-    width: 100vw;
     display: flex;
-    align-items: center;
     justify-content: center;
-    text-align: center;
-    background-color: #f4f4f4;
-    font-family: Arial, sans-serif;
+    align-items: center;
+    height: 100vh;
+    background: #ffffff; /* Changed to solid white */
+    font-family: 'Arial', sans-serif;
 }
-
-
-
-
+  
+/* Login container styles */
 .login-container {
-    font-family: Arial, sans-serif;
-    width: 300px;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #ff8c00; /* Changed to orange */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
     text-align: center;
+    color: #ffffff; /* White text for better contrast */
 }
-
-
-
-
-.loginpage {
-    text-align: center;
-    padding: 20px;
-}
-
-
-
 
 .login-heading {
-    background-color: #ff7043;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #ffffff; /* White text */
+}
+  
+.login-subheading {
+    font-size: 1rem;
+    color: #fce4b3; /* Slightly lighter shade for subheading */
+    margin-bottom: 1.5rem;
+}
+  
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-
-
-
-input {
-    padding: 5px;
-    margin: 5px;
+.form-group {
+    display: flex;
+    flex-direction: column;
 }
 
-
-
-
-button {
-    color: #fefefe;
-    background-color: #ff7043;
-    padding: 5px;
-    margin: 10px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
+.input-field {
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid #fce4b3; /* Light border for better visibility */
+    font-size: 1rem;
+    background: #ffffff; /* White input background */
+    color: #333; /* Dark text color for inputs */
 }
 
-
-
-
-.signup-button {
-    background: none !important;
-    border: none;
-    padding: 0 !important;
-    font-family: arial, sans-serif;
-    color: blue;
-    text-decoration: underline;
-    cursor: pointer;
-    font-size: 15px;
+.input-field:focus {
+    border-color: #ffd27f; /* Lighter orange for focus */
+    outline: none;
+    box-shadow: 0 0 4px #ffd27f;
 }
 
-
-a {
-    color: blue;
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #ffffff;
 }
-
+  
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
 
 .checkbox {
-    color: black;
+    accent-color: #ffd27f; /* Lighter orange for checkbox */
 }
 
+.forgot-password {
+    text-decoration: none;
+    color: #ffd27f; /* Lighter orange for links */
+    font-weight: bold;
+}
 
-label {
-    color: black;
-    font-size: 12px;
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+/* Button styles */
+.login-button {
+    background-color: #ffffff; /* White button */
+    color: #ff8c00; /* Orange text for contrast */
+    border: none;
+    padding: 0.8rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #ffd27f; /* Lighter orange on hover */
+    color: #ffffff;
+}
+
+.signup-link {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #ffffff;
+}
+
+.signup-button {
+    text-decoration: none;
+    background-color: #ffffff; /* White button */
+    color: #ff8c00; /* Orange text */
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.signup-button:hover {
+    background-color: #ffd27f; /* Lighter orange on hover */
+    color: #ffffff;
+}
+
+.error-message {
+    color: #ffd27f; /* Lighter orange for error messages */
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-align: center;
 }

@@ -10,29 +10,53 @@ const HomePage = () => {
   const [selectedFilters, setSelectedFilters] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const { savedStores, toggleSavedStore, isStoreSaved } = useSavedStores();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [username, setUsername] = useState('');
+  const [showLoginPopup, setShowLoginPopup] = useState(false);
+  const [loginError, setLoginError] = useState('');
 
   const handleFilterChange = (filterId) => {
-    setSelectedFilters(prev => {
+    setSelectedFilters((prev) => {
       if (prev.includes(filterId)) {
-        return prev.filter(f => f !== filterId);
+        return prev.filter((f) => f !== filterId);
       }
       return [...prev, filterId];
     });
   };
 
-  const filteredRestaurants = restaurants.filter(restaurant => {
-    const matchesSearch = restaurant.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         restaurant.description.toLowerCase().includes(searchQuery.toLowerCase());
-    
-    const matchesFilters = selectedFilters.length === 0 || selectedFilters.some(filter => 
-      restaurant.categories.map(c => c.toLowerCase()).includes(filter.toLowerCase()) ||
-      restaurant.dietary.map(d => d.toLowerCase()).includes(filter.toLowerCase())
-    );
+  const handleLogin = (event) => {
+    event.preventDefault();
+    const enteredUsername = event.target.elements.username.value.trim();
+    const enteredPassword = event.target.elements.password.value.trim();
+
+    if (enteredUsername === 'user1' && enteredPassword === '12345') {
+      setIsLoggedIn(true);
+      setUsername(enteredUsername);
+      setShowLoginPopup(false);
+      setLoginError('');
+    } else {
+      setLoginError('Invalid username or password.');
+    }
+  };
+
+  const filteredRestaurants = restaurants.filter((restaurant) => {
+    const matchesSearch =
+      restaurant.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      restaurant.description.toLowerCase().includes(searchQuery.toLowerCase());
+
+    const matchesFilters =
+      selectedFilters.length === 0 ||
+      selectedFilters.some((filter) =>
+        restaurant.categories
+          .map((c) => c.toLowerCase())
+          .includes(filter.toLowerCase()) ||
+        restaurant.dietary.map((d) => d.toLowerCase()).includes(filter.toLowerCase())
+      );
 
     return matchesSearch && matchesFilters;
   });
 
-  const savedRestaurants = restaurants.filter(restaurant => 
+  const savedRestaurants = restaurants.filter((restaurant) =>
     savedStores.includes(restaurant.id)
   );
 
@@ -41,7 +65,7 @@ const HomePage = () => {
       <div className="restaurant-card">
         <div className="restaurant-image-container">
           <img src={restaurant.image} alt={restaurant.name} />
-          <button 
+          <button
             className={`save-button ${isStoreSaved(restaurant.id) ? 'saved' : ''}`}
             onClick={(e) => {
               e.preventDefault();
@@ -53,14 +77,6 @@ const HomePage = () => {
         </div>
         <h2>{restaurant.name}</h2>
         <p>{restaurant.description}</p>
-        <div className="restaurant-tags">
-          {restaurant.categories.map((category, index) => (
-            <span key={index} className="tag">{category}</span>
-          ))}
-          {restaurant.dietary.map((diet, index) => (
-            <span key={`diet-${index}`} className="tag dietary">{diet}</span>
-          ))}
-        </div>
         <p className="location">📍 {restaurant.location}</p>
       </div>
     </Link>
@@ -68,9 +84,32 @@ const HomePage = () => {
 
   return (
     <div className="homepage">
-      <ThemeToggle />
+      <div className="top-bar">
+        <ThemeToggle />
+        {!isLoggedIn ? (
+          <button
+            className="sign-in-button"
+            onClick={() => setShowLoginPopup(true)}
+          >
+            Sign In
+          </button>
+        ) : (
+          <div className="user-controls">
+            <span className="welcome-message">Welcome, {username}!</span>
+            <button
+              className="log-out-button"
+              onClick={() => {
+                setIsLoggedIn(false);
+                setUsername('');
+              }}
+            >
+              Log Out
+            </button>
+          </div>
+        )}
+      </div>
       <h1 className="site-title">Replate</h1>
-      
+
       <div className="search-container">
         <input
           type="text"
@@ -82,10 +121,7 @@ const HomePage = () => {
         <span className="search-icon">🔍</span>
       </div>
 
-      <FilterBar 
-        selectedFilters={selectedFilters} 
-        onFilterChange={handleFilterChange}
-      />
+      <FilterBar selectedFilters={selectedFilters} onFilterChange={handleFilterChange} />
 
       {savedRestaurants.length > 0 && (
         <div className="saved-stores-section">
@@ -106,6 +142,41 @@ const HomePage = () => {
           ))}
         </div>
       </div>
+
+      {showLoginPopup && (
+        <div className="login-popup">
+          <form onSubmit={handleLogin} className="login-form">
+            <h2>Sign In</h2>
+            {loginError && <p className="login-error">{loginError}</p>}
+            <input
+              type="text"
+              name="username"
+              placeholder="Username"
+              className="login-input"
+              required
+            />
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              className="login-input"
+              required
+            />
+            <div className="button-container">
+              <button type="submit" className="login-button">
+                Log In
+              </button>
+              <button
+                type="button"
+                className="cancel-button"
+                onClick={() => setShowLoginPopup(false)}
+              >
+                Cancel
+              </button>
+            </div>
+          </form>
+        </div>
+      )}
     </div>
   );
 };
