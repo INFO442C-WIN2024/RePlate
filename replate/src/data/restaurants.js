@@ -11,7 +11,8 @@ export const restaurants = [
       { id: 1, name: "Chicken Shawarma", price: 12.99, description: "Marinated chicken wrapped in fresh pita bread" },
       { id: 2, name: "Falafel Wrap", price: 10.99, description: "Crispy falafel with tahini sauce" },
       { id: 3, name: "Mixed Grill Plate", price: 15.99, description: "Assortment of grilled meats with rice" }
-    ]
+    ], 
+    discountedMenu: []
   },
   { 
     id: 2, 

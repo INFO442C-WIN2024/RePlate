@@ -12,7 +12,7 @@ import BusinessSignUp from "./BusinessCreateAccount";
 import RestaurantPage from './RestaurantPage';
 import Cart from './components/Cart';
 import Map from './components/MapView';
-
+import CreateDiscount from "./components/CreateDiscount";
 
 function App() {
   return (
@@ -31,6 +31,7 @@ function App() {
               <Route path="/businesssignup" element={<BusinessSignUp />} />
               <Route path="/accountcreated" element={<AccountCreated />} />
               <Route path="/accountcreatedbusiness" element={<BusinessAccountCreated />} />
+              <Route path="/creatediscount" element={<CreateDiscount />} />
             </Routes>
           </Router>
         </CartProvider>

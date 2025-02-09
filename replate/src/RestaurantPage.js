@@ -15,7 +15,7 @@ const RestaurantPage = () => {
   const restaurant = restaurants.find(r => r.id === parseInt(id));
 
   if (!restaurant) {
-    return <div>Restaurant not found</div>;
+    return <div>Restaurant not found</div>;``
   }
 
   return (
