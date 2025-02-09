@@ -177,6 +177,16 @@ const HomePage = () => {
           </form>
         </div>
       )}
+
+      {/* Bottom Navigation Bar */}
+      <div className="bottom-nav">
+        <Link to="/map" className="nav-button">
+          🗺️ Map View
+        </Link>
+        <Link to="/cart" className="nav-button">
+          🛒 Cart
+        </Link>
+      </div>
     </div>
   );
 };

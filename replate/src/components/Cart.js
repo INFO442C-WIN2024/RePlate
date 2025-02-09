@@ -1,11 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { useCart } from '../context/CartContext';
-import './Cart.css';
+import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useCart } from '../context/CartContext'; // Import your custom cart context
+import './Cart.css'; // Import your styling
 
 const Cart = () => {
+  // Use hooks and initialize constants at the top of your component
   const { cart, removeFromCart, getTotal, clearCart } = useCart();
+  const navigate = useNavigate(); // Initialize the useNavigate hook here
 
+  // Function to handle the navigation to the checkout page
+  const handleCheckout = () => {
+    navigate('/checkout'); // Redirects to the Checkout page
+  };
+
+  // If the cart is empty, show an empty cart message
   if (cart.length === 0) {
     return (
       <div className="cart-empty">
@@ -15,6 +23,7 @@ const Cart = () => {
     );
   }
 
+  // Render the cart items and summary
   return (
     <div className="cart-container">
       <h2>Your Cart</h2>
@@ -43,7 +52,8 @@ const Cart = () => {
         <button onClick={clearCart} className="clear-cart">
           Clear Cart
         </button>
-        <button className="checkout-button">
+        {/* Attach the handleCheckout function to the button */}
+        <button onClick={handleCheckout} className="checkout-button">
           Proceed to Checkout
         </button>
       </div>
@@ -55,4 +65,4 @@ const Cart = () => {
   );
 };
 
-export default Cart; 
+export default Cart;
