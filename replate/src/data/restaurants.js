@@ -31,7 +31,7 @@ export const restaurants = [
   { 
     id: 3, 
     name: "Manoushe Express", 
-    image: "https://images.squarespace-cdn.com/content/v1/5e8f3c7dbf5c5b572c13bfb2/1590955977424-4JQNEZFXLW8BG1Z0P8Y7/20200530_131400.jpg", 
+    image: "https://cookingorgeous.com/wp-content/uploads/2024/01/easy-homemade-lebanese-chicken-shawarma-20-500x500.jpg", 
     description: "Authentic Lebanese shawarma and manoushe flatbreads", 
     location: "4234 University Way NE, Seattle",
     categories: ["Middle Eastern", "Lebanese"],
@@ -46,7 +46,7 @@ export const restaurants = [
   { 
     id: 4, 
     name: "Sumo Express Sushi", 
-    image: "https://images.seattletimes.com/wp-content/uploads/2024/09/09062024_kent_1306272.jpg?d=780x585", 
+    image: "https://everydayglutenfreegourmet.ca/wp-content/uploads/2023/07/handmade-sushi-rolls.jpg", 
     description: "Fresh and delicious sushi made to order", 
     location: "4525 University Way NE, Seattle",
     categories: ["Japanese", "Sushi"],
@@ -61,7 +61,7 @@ export const restaurants = [
   { 
     id: 5, 
     name: "Bengal Tiger", 
-    image: "https://images.seattletimes.com/wp-content/uploads/2024/09/09062024_kent_1306272.jpg?d=780x585", 
+    image: "https://www.allrecipes.com/thmb/SIgWrOI85-BlVbtGgUeew-77B7o=/0x512/filters:no_upscale():max_bytes(150000):strip_icc()/AR-141169-Easy-Indian-Butter-Chicken-DDMFS-4x3-beauty-588ff54d1e0f4a0788906e851e27d540.jpg", 
     description: "Authentic Bengali and Indian cuisine", 
     location: "4214 University Way NE, Seattle",
     categories: ["Indian", "Bengali"],
@@ -76,7 +76,7 @@ export const restaurants = [
   { 
     id: 6, 
     name: "Church's Chicken", 
-    image: "https://images.seattletimes.com/wp-content/uploads/2024/09/09062024_kent_1306272.jpg?d=780x585", 
+    image: "https://leitesculinaria.com/wp-content/uploads/2024/04/batter-fried-chicken-1200.jpg", 
     description: "Crispy, juicy fried chicken and southern sides", 
     location: "4555 University Way NE, Seattle",
     categories: ["American", "Fried Chicken"],
@@ -91,7 +91,7 @@ export const restaurants = [
   { 
     id: 7, 
     name: "Halal Smash Burger", 
-    image: "https://images.seattletimes.com/wp-content/uploads/2024/09/09062024_kent_1306272.jpg?d=780x585", 
+    image: "https://res.cloudinary.com/sagacity/image/upload/c_crop,h_3277,w_4915,x_0,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_1080/0523_Smash-That-Burger_Amber-Fouts_57A4049_ajwyvw.jpg", 
     description: "Halal certified smashed burgers and fries", 
     location: "4299 University Way NE, Seattle",
     categories: ["American", "Burgers"],

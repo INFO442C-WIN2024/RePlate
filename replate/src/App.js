@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
 import { ThemeProvider } from './context/ThemeContext';
 import { SavedStoresProvider } from './context/SavedStoresContext';
+import Checkout from './components/Checkout';
 import HomePage from "./Homepage";
 import LoginPage from "./Loginpage";
 import SignupForm from "./SignupPage";
@@ -31,7 +32,11 @@ function App() {
               <Route path="/businesssignup" element={<BusinessSignUp />} />
               <Route path="/accountcreated" element={<AccountCreated />} />
               <Route path="/accountcreatedbusiness" element={<BusinessAccountCreated />} />
+<<<<<<< HEAD
               <Route path="/creatediscount" element={<CreateDiscount />} />
+=======
+              <Route path="/checkout" element={<Checkout />} />
+>>>>>>> 33964251f6aadf840107a31e82c5aaa17a9908a3
             </Routes>
           </Router>
         </CartProvider>
