@@ -1,108 +1,70 @@
-# RePlate
+# Getting Started with Create React App
 
-RePlate is a web application designed to reduce food waste by connecting restaurants with surplus food to individuals and organizations in need. Inspired by food delivery platforms like DoorDash, RePlate makes it easy to browse available food items, request pickups, and reduce waste in the community.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Features
+## Available Scripts
 
-Browse Available Food – Users can view surplus food items from participating restaurants.
+In the project directory, you can run:
 
-Request a Pickup – Users can claim available food and schedule a pickup.
+### `npm start`
 
-Restaurant Dashboard – Restaurants can list surplus food items for donation.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-Interactive Map – See nearby available food locations.
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-Tech Stack
+### `npm test`
 
-Frontend: React, Tailwind CSS
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-Backend: Firebase (Authentication, Firestore Database, Hosting)
+### `npm run build`
 
-Deployment: Firebase Hosting
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-State Management: React Context API / Redux (if needed)
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-Getting Started
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-Prerequisites
+### `npm run eject`
 
-Make sure you have the following installed:
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-Node.js & npm
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Firebase CLI
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-Installation
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-Clone the repository:
+## Learn More
 
-git clone https://github.com/your-username/RePlate.git
-cd RePlate
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-Install dependencies:
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-npm install
+### Code Splitting
 
-Set up Firebase:
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-Create a Firebase project at Firebase Console.
+### Analyzing the Bundle Size
 
-Enable Firestore, Authentication, and Hosting.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-Download firebaseConfig and add it to your React app in a .env file.
+### Making a Progressive Web App
 
-Build the project:
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-npm run build
+### Advanced Configuration
 
-Deploy to Firebase:
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-firebase deploy
+### Deployment
 
-Running Locally
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-To run the app on your local machine:
+### `npm run build` fails to minify
 
-npm start
-
-Visit http://localhost:3000 in your browser.
-
-Directory Structure
-
-RePlate/
-├── public/          # Static assets
-├── src/
-│   ├── components/  # Reusable UI components
-│   ├── pages/       # Page components (Home, Dashboard, etc.)
-│   ├── styles/      # CSS & Tailwind styles
-│   ├── firebase.js  # Firebase config & initialization
-│   ├── App.js       # Main application component
-│   ├── index.js     # Entry point
-├── firebase.json    # Firebase configuration
-├── .env             # Environment variables
-├── package.json     # Project dependencies
-└── README.md        # Project documentation
-
-Future Features
-
-User Profiles – Personalized dashboards for users and restaurants.
-
-Notification System – Alerts for new food listings.
-
-Analytics Dashboard – Insights on food waste reduction impact.
-
-Contributing
-
-Fork the repo and create a new branch.
-
-Make your changes and commit with a meaningful message.
-
-Open a pull request for review.
-
-License
-
-MIT License
-
-Questions?
-
-Feel free to open an issue or reach out!
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
