@@ -13,7 +13,7 @@ import BusinessSignUp from "./BusinessCreateAccount";
 import RestaurantPage from './RestaurantPage';
 import Cart from './components/Cart';
 import Map from './components/MapView';
-import CreateDiscount from "./components/CreateDiscount";
+import CreateDiscount from "./CreateDiscount";
 
 function App() {
   return (
@@ -32,11 +32,8 @@ function App() {
               <Route path="/businesssignup" element={<BusinessSignUp />} />
               <Route path="/accountcreated" element={<AccountCreated />} />
               <Route path="/accountcreatedbusiness" element={<BusinessAccountCreated />} />
-<<<<<<< HEAD
               <Route path="/creatediscount" element={<CreateDiscount />} />
-=======
               <Route path="/checkout" element={<Checkout />} />
->>>>>>> 33964251f6aadf840107a31e82c5aaa17a9908a3
             </Routes>
           </Router>
         </CartProvider>
