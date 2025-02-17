@@ -10,6 +10,7 @@ import AccountCreated from "./AccountCreated";
 import BusinessAccountCreated from "./AccountCreatedBusiness";
 import BusinessLoginPage from "./BusinessLoginPage";
 import BusinessSignUp from "./BusinessCreateAccount";
+import AccountType from "./AccountType";
 import RestaurantPage from './RestaurantPage';
 import Cart from './components/Cart';
 import Map from './components/MapView';
@@ -29,6 +30,7 @@ function App() {
               <Route path="/cart" element={<Cart />} />
               <Route path="/map" element={<Map />} />
               <Route path="/signup" element={<SignupForm />} />
+              <Route path="accounttype" element={<AccountType />} />
               <Route path="/businesssignup" element={<BusinessSignUp />} />
               <Route path="/accountcreated" element={<AccountCreated />} />
               <Route path="/accountcreatedbusiness" element={<BusinessAccountCreated />} />
