@@ -126,3 +126,14 @@ export const dietaryFilters = [
   { id: 'vegan', name: 'Vegan', icon: '🌱' },
   { id: 'halal', name: 'Halal', icon: '🥩' }
 ]; 
+
+export const couponList = [
+  {
+    key: "123456",
+    value: 0.1
+  },
+  {
+    key: "11111",
+    value: 0.5
+  }
+]

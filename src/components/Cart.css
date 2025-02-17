@@ -2,6 +2,11 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+  color: #fff;
+}
+
+.cart-container h2 {
+  color: #fff;
 }
 
 .cart-items {
@@ -22,6 +27,16 @@
 
 .item-info h3 {
   margin: 0;
+  color: #fff;
+}
+
+.coupon-form span {
+
+  color: #666 !important;
+}
+
+.coupon-input {
+  width: 140px !important;
 }
 
 .remove-button {
@@ -46,6 +61,7 @@
   font-size: 1.2em;
   font-weight: bold;
   margin-bottom: 20px;
+  color: #333;
 }
 
 .checkout-button {
@@ -81,4 +97,4 @@
 .cart-empty {
   text-align: center;
   padding: 50px;
-} 
+}
