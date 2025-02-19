@@ -211,3 +211,28 @@ export const couponList = [
     value: 0.5
   }
 ]
+export function updateDiscounts() {
+  restaurants.forEach(restaurant => {
+    restaurant.menu.forEach(item => {
+      item.isDiscounted = false;
+      item.discountPrice = null;
+    });
+  });
+
+  const discountedRestaurants = restaurants
+    .sort(() => 0.5 - Math.random())
+    .slice(0, Math.floor(restaurants.length / 2));
+
+  discountedRestaurants.forEach(restaurant => {
+    const discountItems = restaurant.menu
+      .sort(() => 0.5 - Math.random())
+      .slice(0, 2);
+
+    discountItems.forEach(item => {
+      item.isDiscounted = true;
+      item.discountPrice = (item.price * 0.8).toFixed(2);
+    });
+  });
+}
+
+updateDiscounts();
