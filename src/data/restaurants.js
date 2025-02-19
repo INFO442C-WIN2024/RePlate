@@ -52,10 +52,10 @@ export const restaurants = [
     categories: ["Japanese", "Sushi"],
     dietary: ["Vegetarian options"],
     menu: [
-      { id: 201, name: "California Roll", price: 8.99, description: "Crab, avocado, and cucumber" },
-      { id: 202, name: "Spicy Tuna Roll", price: 10.99, description: "Fresh tuna with spicy mayo" },
-      { id: 203, name: "Seattle Roll", price: 12.99, description: "Salmon, cream cheese, and avocado" },
-      { id: 204, name: "Bento Box", price: 16.99, description: "Teriyaki chicken, California roll, and gyoza" }
+      { id: 401, name: "California Roll", price: 8.99, description: "Crab, avocado, and cucumber" },
+      { id: 402, name: "Spicy Tuna Roll", price: 10.99, description: "Fresh tuna with spicy mayo" },
+      { id: 403, name: "Seattle Roll", price: 12.99, description: "Salmon, cream cheese, and avocado" },
+      { id: 404, name: "Bento Box", price: 16.99, description: "Teriyaki chicken, California roll, and gyoza" }
     ]
   },
   { 
@@ -67,10 +67,25 @@ export const restaurants = [
     categories: ["Indian", "Bengali"],
     dietary: ["Vegetarian", "Halal"],
     menu: [
-      { id: 301, name: "Chicken Tikka Masala", price: 15.99, description: "Creamy tomato curry with tender chicken" },
-      { id: 302, name: "Bengali Fish Curry", price: 17.99, description: "Traditional fish curry with mustard sauce" },
-      { id: 303, name: "Biryani", price: 16.99, description: "Aromatic rice dish with choice of protein" },
-      { id: 304, name: "Butter Naan", price: 3.99, description: "Fresh baked flatbread with butter" }
+      { id: 501, name: "Chicken Tikka Masala", price: 15.99, description: "Creamy tomato curry with tender chicken" },
+      { id: 502, name: "Bengali Fish Curry", price: 17.99, description: "Traditional fish curry with mustard sauce" },
+      { id: 503, name: "Biryani", price: 16.99, description: "Aromatic rice dish with choice of protein" },
+      { id: 504, name: "Butter Naan", price: 3.99, description: "Fresh baked flatbread with butter" }
+    ]
+  },
+  
+  { 
+    id: 5, 
+    name: "Jewel of India", 
+    image: "https://media-cdn.tripadvisor.com/media/photo-s/0a/52/ba/05/lunch-buffet.jpg",
+    description: "Authentic Indian cuisine", 
+    location: "4214 University Way NE, Seattle",
+    categories: ["Indian"],
+    dietary: ["Vegetarian", "Halal"],
+    menu: [
+      { id: 501, name: "Chicken Tikka Masala", price: 15.99, description: "Creamy tomato curry with tender chicken" },
+      { id: 503, name: "Chicken Biryani", price: 16.99, description: "Aromatic rice dish with chicken" },
+      { id: 504, name: "Butter Naan", price: 3.99, description: "Fresh baked flatbread with butter" }
     ]
   },
   { 
@@ -102,6 +117,63 @@ export const restaurants = [
       { id: 503, name: "Loaded Fries", price: 6.99, description: "Crispy fries with cheese sauce and jalapeños" },
       { id: 504, name: "Chicken Sandwich", price: 10.99, description: "Crispy halal chicken with pickles and sauce" }
     ]
+  },
+  { 
+    id: 8, 
+    name: "Istanbul Shawarma", 
+    image: "https://s3-media0.fl.yelpcdn.com/bphoto/CG8yJb5ymdn3vWTB7NFu3A/348s.jpg", 
+    description: "Turkish shawarma and manoushe flatbreads.", 
+    location: "4299 University Way NE, Seattle",
+    categories: ["Shawarma"],
+    dietary: ["Halal"],
+    menu: [
+      { id: 101, name: "Chicken Shawarma Wrap", price: 11.99, description: "Marinated chicken with garlic sauce and pickles" },
+      { id: 102, name: "Beef Shawarma Plate", price: 15.99, description: "Tender beef shawarma served with rice and hummus" },
+      { id: 104, name: "Falafel Wrap", price: 9.99, description: "Crispy falafel with tahini sauce and vegetables" }
+    ]
+  },
+  ,
+  { 
+    id: 9, 
+    name: "Sushi from QFC by Yummi", 
+    image: "https://everydayglutenfreegourmet.ca/wp-content/uploads/2023/07/handmade-sushi-rolls.jpg", 
+    description: "Fresh and delicious sushi made to order", 
+    location: "4525 University Way NE, Seattle",
+    categories: ["Japanese", "Sushi"],
+    dietary: ["Vegetarian options"],
+    menu: [
+      { id: 901, name: "California Roll", price: 8.99, description: "Crab, avocado, and cucumber" },
+      { id: 902, name: "Spicy Tuna Roll", price: 10.99, description: "Fresh tuna with spicy mayo" },
+      { id: 903, name: "Japanese Bagel Roll", price: 12.99, description: "Salmon, cream cheese, and avocado" },
+      { id: 904, name: "Flyin' Hawaiian Salmon Poke Bowl", price: 16.99, description: "Salmon poke bowl with avocado, lettuce, and crispy onions" }
+    ]
+  },
+  { 
+    id: 10, 
+    name: "PCC - Fremont", 
+    image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/be/2d/62/pcc-natural-markets.jpg?w=900&h=500&s=1", 
+    description: "Hot soup bar and sandwiches", 
+    location: "4525 University Way NE, Seattle",
+    categories: ["Soups", "Sandwiches", "Pizza"],
+    dietary: ["Vegetarian options"],
+    menu: [
+      { id: 1001, name: "Salmon cake and potato salad", price: 8.99, description: "Salmon cake and potato salad" },
+      { id: 1002, name: "Mozarella panini", price: 8.99, description: "Mozarella panini with pesto and tomatoes" }
+    ]
+  },
+  
+  { 
+    id: 10, 
+    name: "Whole Foods", 
+    image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/be/2d/62/pcc-natural-markets.jpg?w=900&h=500&s=1", 
+    description: "Hot soup bar and sandwiches", 
+    location: "4525 University Way NE, Seattle",
+    categories: ["Soups", "Sandwiches", "Pizza"],
+    dietary: ["Vegetarian options"],
+    menu: [
+      { id: 1001, name: "Salmon cake and potato salad", price: 8.99, description: "Salmon cake and potato salad" },
+      { id: 1002, name: "Mozarella panini", price: 8.99, description: "Mozarella panini with pesto and tomatoes" }
+    ]
   }
 ];
 
@@ -117,6 +189,8 @@ export const filterCategories = [
   { id: 'mexican', name: 'Mexican', icon: '🌮' },
   { id: 'african', name: 'African', icon: '🍲' },
   { id: 'asian', name: 'Asian', icon: '🥢' },
+  { id: 'sandwiches', name: 'Sandwiches', icon: '🍔' },
+  { id: 'soups', name: 'Soups', icon: '🍜' },
   { id: 'salads', name: 'Salads', icon: '🥗' },
   { id: 'desserts', name: 'Desserts', icon: '🍰' }
 ];
@@ -124,7 +198,7 @@ export const filterCategories = [
 export const dietaryFilters = [
   { id: 'vegetarian', name: 'Vegetarian', icon: '🥬' },
   { id: 'vegan', name: 'Vegan', icon: '🌱' },
-  { id: 'halal', name: 'Halal', icon: '🥩' }
+  { id: 'halal', name: 'Halal', icon: 'حلال' }
 ]; 
 
 export const couponList = [
