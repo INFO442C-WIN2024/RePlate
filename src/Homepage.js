@@ -9,6 +9,7 @@ import './Homepage.css';
 const HomePage = () => {
   const [selectedFilters, setSelectedFilters] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
+  const [discountFilter, setDiscountFilter] = useState(false);
   const { savedStores, toggleSavedStore, isStoreSaved } = useSavedStores();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [username, setUsername] = useState('');
@@ -43,18 +44,20 @@ const HomePage = () => {
     const matchesSearch =
       restaurant.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       restaurant.description.toLowerCase().includes(searchQuery.toLowerCase());
-
+  
     const matchesFilters =
       selectedFilters.length === 0 ||
       selectedFilters.some((filter) =>
-        restaurant.categories
-          .map((c) => c.toLowerCase())
-          .includes(filter.toLowerCase()) ||
-        restaurant.dietary.map((d) => d.toLowerCase()).includes(filter.toLowerCase())
+        restaurant.categories.some((c) => c.toLowerCase() === filter.toLowerCase()) ||
+        restaurant.dietary.some((d) => d.toLowerCase() === filter.toLowerCase())
       );
-
-    return matchesSearch && matchesFilters;
+  
+    const hasDiscountedItems = restaurant.menu.some((item) => item.isDiscounted);
+    const matchesDiscount = !discountFilter || hasDiscountedItems;
+  
+    return matchesSearch && matchesFilters && matchesDiscount;
   });
+  
 
   const savedRestaurants = restaurants.filter((restaurant) =>
     savedStores.includes(restaurant.id)
@@ -121,7 +124,14 @@ const HomePage = () => {
         <span className="search-icon">🔍</span>
       </div>
 
-      <FilterBar selectedFilters={selectedFilters} onFilterChange={handleFilterChange} />
+      <FilterBar 
+  selectedFilters={selectedFilters} 
+  onFilterChange={handleFilterChange} 
+  discountFilter={discountFilter} 
+  onDiscountFilterChange={setDiscountFilter} 
+/>
+
+
 
       {savedRestaurants.length > 0 && (
         <div className="saved-stores-section">
@@ -178,7 +188,6 @@ const HomePage = () => {
         </div>
       )}
 
-      {/* Bottom Navigation Bar */}
       <div className="bottom-nav">
         <Link to="/map" className="nav-button">
           🗺️ Map View

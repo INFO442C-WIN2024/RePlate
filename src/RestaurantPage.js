@@ -11,7 +11,6 @@ const RestaurantPage = () => {
   const { id } = useParams();
   const { cart, addToCart } = useCart();
 
-  // Find the restaurant data based on the id
   const restaurant = restaurants.find(r => r.id === parseInt(id));
 
   if (!restaurant) {
@@ -43,11 +42,18 @@ const RestaurantPage = () => {
         <h2>Menu</h2>
         <div className="menu-items">
           {restaurant.menu.map((item) => (
-            <div key={item.id} className="menu-item">
+            <div key={item.id} className={`menu-item ${item.isDiscounted ? 'discounted' : ''}`}>
               <div className="menu-item-info">
                 <h3>{item.name}</h3>
                 <p>{item.description}</p>
-                <span className="price">${item.price.toFixed(2)}</span>
+                {item.isDiscounted ? (
+                  <div className="price-container">
+                    <span className="original-price">${item.price.toFixed(2)}</span>
+                    <span className="discount-price">${item.discountPrice}</span>
+                  </div>
+                ) : (
+                  <span className="price">${item.price.toFixed(2)}</span>
+                )}
               </div>
               <button
                 className="add-to-cart"
@@ -64,9 +70,4 @@ const RestaurantPage = () => {
   );
 };
 
-/* <Link to="/" className="back-button">← Back to Home</Link>
-<Link to="/cart" className="cart-button">
-  🛒 Cart ({cart.length})
-</Link> */
-
-export default RestaurantPage; 
+export default RestaurantPage;

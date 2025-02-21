@@ -62,3 +62,18 @@
   background-color: #22c55e;
   border-color: #22c55e;
 } 
+.discount-section {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.filter-button.discount {
+  background-color: #ffd700;
+  color: black;
+}
+
+.filter-button.discount.active {
+  background-color: #ffa500;
+  color: white;
+}

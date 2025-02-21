@@ -2,7 +2,7 @@ import React from 'react';
 import { filterCategories, dietaryFilters } from '../data/restaurants';
 import './FilterBar.css';
 
-const FilterBar = ({ selectedFilters, onFilterChange }) => {
+const FilterBar = ({ selectedFilters, onFilterChange, discountFilter, onDiscountFilterChange }) => {
   const handleFilterClick = (filterId) => {
     onFilterChange(filterId);
   };
@@ -23,7 +23,7 @@ const FilterBar = ({ selectedFilters, onFilterChange }) => {
           ))}
         </div>
       </div>
-      
+
       <div className="dietary-section">
         <div className="filter-scroll">
           {dietaryFilters.map((diet) => (
@@ -38,8 +38,17 @@ const FilterBar = ({ selectedFilters, onFilterChange }) => {
           ))}
         </div>
       </div>
+
+      <div className="discount-section">
+        <button
+          className={`filter-button discount ${discountFilter ? 'active' : ''}`}
+          onClick={() => onDiscountFilterChange(!discountFilter)}
+        >
+          🏷️ Only Discounted Items
+        </button>
+      </div>
     </div>
   );
 };
 
-export default FilterBar; 
+export default FilterBar;
