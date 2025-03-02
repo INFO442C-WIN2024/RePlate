@@ -1,6 +1,7 @@
 export const restaurants = [
   { 
     id: 1, 
+    slug: "shawarma-king", 
     name: "Shawarma King", 
     image: "https://images.seattletimes.com/wp-content/uploads/2024/09/09062024_kent_1306272.jpg?d=780x585", 
     description: "Delicious middle-eastern meals.", 
@@ -16,6 +17,7 @@ export const restaurants = [
   },
   { 
     id: 2, 
+    slug: "korean-tofu-house", 
     name: "Korean Tofu House", 
     image: "https://s3-media0.fl.yelpcdn.com/bphoto/0MrlQ4w_mH-nqbNXEJYONw/348s.jpg", 
     description: "Delicious Korean meals.", 
@@ -30,6 +32,7 @@ export const restaurants = [
   },
   { 
     id: 3, 
+    slug: "manoushe-express", 
     name: "Manoushe Express", 
     image: "https://cookingorgeous.com/wp-content/uploads/2024/01/easy-homemade-lebanese-chicken-shawarma-20-500x500.jpg", 
     description: "Authentic Lebanese shawarma and manoushe flatbreads", 
@@ -45,6 +48,7 @@ export const restaurants = [
   },
   { 
     id: 4, 
+    slug: "sumo-express-sushi", 
     name: "Sumo Express Sushi", 
     image: "https://everydayglutenfreegourmet.ca/wp-content/uploads/2023/07/handmade-sushi-rolls.jpg", 
     description: "Fresh and delicious sushi made to order", 
@@ -60,6 +64,7 @@ export const restaurants = [
   },
   { 
     id: 5, 
+    slug: "bengal-tiger", 
     name: "Bengal Tiger", 
     image: "https://www.allrecipes.com/thmb/SIgWrOI85-BlVbtGgUeew-77B7o=/0x512/filters:no_upscale():max_bytes(150000):strip_icc()/AR-141169-Easy-Indian-Butter-Chicken-DDMFS-4x3-beauty-588ff54d1e0f4a0788906e851e27d540.jpg", 
     description: "Authentic Bengali and Indian cuisine", 
@@ -76,6 +81,7 @@ export const restaurants = [
   
   { 
     id: 5, 
+    slug: "jewel-of-india", 
     name: "Jewel of India", 
     image: "https://media-cdn.tripadvisor.com/media/photo-s/0a/52/ba/05/lunch-buffet.jpg",
     description: "Authentic Indian cuisine", 
@@ -90,6 +96,7 @@ export const restaurants = [
   },
   { 
     id: 6, 
+    slug: "church's-chicken", 
     name: "Church's Chicken", 
     image: "https://leitesculinaria.com/wp-content/uploads/2024/04/batter-fried-chicken-1200.jpg", 
     description: "Crispy, juicy fried chicken and southern sides", 
@@ -105,6 +112,7 @@ export const restaurants = [
   },
   { 
     id: 7, 
+    slug: "halal-smash-burger", 
     name: "Halal Smash Burger", 
     image: "https://res.cloudinary.com/sagacity/image/upload/c_crop,h_3277,w_4915,x_0,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_1080/0523_Smash-That-Burger_Amber-Fouts_57A4049_ajwyvw.jpg", 
     description: "Halal certified smashed burgers and fries", 
@@ -120,6 +128,7 @@ export const restaurants = [
   },
   { 
     id: 8, 
+    slug: "istanbul-shawarma", 
     name: "Istanbul Shawarma", 
     image: "https://s3-media0.fl.yelpcdn.com/bphoto/CG8yJb5ymdn3vWTB7NFu3A/348s.jpg", 
     description: "Turkish shawarma and manoushe flatbreads.", 
@@ -135,6 +144,7 @@ export const restaurants = [
   ,
   { 
     id: 9, 
+    slug: "sushi-from-qFC-by-yummi", 
     name: "Sushi from QFC by Yummi", 
     image: "https://everydayglutenfreegourmet.ca/wp-content/uploads/2023/07/handmade-sushi-rolls.jpg", 
     description: "Fresh and delicious sushi made to order", 
@@ -150,6 +160,7 @@ export const restaurants = [
   },
   { 
     id: 10, 
+    slug: "pcc-fremont", 
     name: "PCC - Fremont", 
     image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/be/2d/62/pcc-natural-markets.jpg?w=900&h=500&s=1", 
     description: "Hot soup bar and sandwiches", 
@@ -164,6 +175,7 @@ export const restaurants = [
   
   { 
     id: 10, 
+    slug: "whole-foods", 
     name: "Whole Foods", 
     image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/be/2d/62/pcc-natural-markets.jpg?w=900&h=500&s=1", 
     description: "Hot soup bar and sandwiches", 

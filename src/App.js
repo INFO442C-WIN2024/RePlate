@@ -15,6 +15,7 @@ import RestaurantPage from './RestaurantPage';
 import Cart from './components/Cart';
 import Map from './components/MapView';
 import CreateDiscount from "./CreateDiscount";
+import { Navigate } from 'react-router-dom';
 
 function App() {
   return (
@@ -23,10 +24,11 @@ function App() {
         <CartProvider>
           <Router>
             <Routes>
-              <Route path="/" element={<HomePage />} />
+            <Route path="/" element={<Navigate to="/restaurant" replace />} />
+            <Route path="/restaurant" element={<HomePage />} />
               <Route path="/login" element={<LoginPage />} />
               <Route path="/businesslogin" element={<BusinessLoginPage />} />
-              <Route path="/restaurant/:id" element={<RestaurantPage />} />
+              <Route path="/restaurant/:slug" element={<RestaurantPage />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/map" element={<Map />} />
               <Route path="/signup" element={<SignupForm />} />

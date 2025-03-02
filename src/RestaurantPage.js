@@ -8,10 +8,10 @@ import './components/Header.css';
 import './RestaurantPage.css';
 
 const RestaurantPage = () => {
-  const { id } = useParams();
+  const { slug } = useParams();
   const { cart, addToCart } = useCart();
 
-  const restaurant = restaurants.find(r => r.id === parseInt(id));
+  const restaurant = restaurants.find(r => r.slug === slug);
 
   if (!restaurant) {
     return <div>Restaurant not found</div>;
@@ -57,7 +57,7 @@ const RestaurantPage = () => {
               </div>
               <button
                 className="add-to-cart"
-                onClick={() => addToCart(item, restaurant.id)}
+                onClick={() => addToCart(item, restaurant.name)}
               >
                 Add to Cart
               </button>

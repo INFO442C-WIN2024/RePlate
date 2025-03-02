@@ -4,6 +4,8 @@ import { restaurants } from './data/restaurants';
 import { useSavedStores } from './context/SavedStoresContext';
 import ThemeToggle from './components/ThemeToggle';
 import FilterBar from './components/FilterBar';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Homepage.css';
 
 const HomePage = () => {
@@ -15,6 +17,11 @@ const HomePage = () => {
   const [username, setUsername] = useState('');
   const [showLoginPopup, setShowLoginPopup] = useState(false);
   const [loginError, setLoginError] = useState('');
+  const navigate = useNavigate();
+  useEffect(() => {
+    navigate('/restaurant');
+  }, []);
+
 
   const handleFilterChange = (filterId) => {
     setSelectedFilters((prev) => {
@@ -64,7 +71,7 @@ const HomePage = () => {
   );
 
   const RestaurantCard = ({ restaurant }) => (
-    <Link to={`/restaurant/${restaurant.id}`} className="restaurant-link">
+    <Link to={`/restaurant/${restaurant.slug}`} className="restaurant-link">
       <div className="restaurant-card">
         <div className="restaurant-image-container">
           <img src={restaurant.image} alt={restaurant.name} />
