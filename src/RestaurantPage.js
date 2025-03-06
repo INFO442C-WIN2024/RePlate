@@ -21,12 +21,6 @@ const RestaurantPage = () => {
     <div className="restaurant-page">
       <div className="header-nav">
         <Header />
-        <div className="navigation-links">
-          <Link to="/" className="back-button">← Back to Home</Link>
-          <Link to="/cart" className="cart-button">
-            🛒 Cart ({cart.length})
-          </Link>
-        </div>
       </div>
 
       <div className="restaurant-header">
