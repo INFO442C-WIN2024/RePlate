@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { restaurants } from './data/restaurants';
 import { useCart } from './context/CartContext';
 import ThemeToggle from './components/ThemeToggle';
 import Header from './components/Header';
-import './components/Header.css';
 import './RestaurantPage.css';
 
 const RestaurantPage = () => {
   const { slug } = useParams();
   const { cart, addToCart } = useCart();
+  const [showPopup, setShowPopup] = useState(false);
 
   const restaurant = restaurants.find(r => r.slug === slug);
 
@@ -17,10 +17,24 @@ const RestaurantPage = () => {
     return <div>Restaurant not found</div>;
   }
 
+  const handleAddToCart = (item) => {
+    addToCart(item, restaurant.id);
+    setShowPopup(true);
+    setTimeout(() => setShowPopup(false), 2000);
+  };
+
   return (
     <div className="restaurant-page">
+      {showPopup && <div className="cart-popup">Item added to cart!</div>}
+
       <div className="header-nav">
         <Header />
+        <div className="navigation-links">
+          <Link to="/" className="back-button">← Back to Home</Link>
+          <Link to="/cart" className="cart-button">
+            🛒 Cart ({cart.length})
+          </Link>
+        </div>
       </div>
 
       <div className="restaurant-header">
@@ -51,7 +65,7 @@ const RestaurantPage = () => {
               </div>
               <button
                 className="add-to-cart"
-                onClick={() => addToCart(item, restaurant.name)}
+                onClick={() => handleAddToCart(item)}
               >
                 Add to Cart
               </button>
