@@ -93,7 +93,7 @@ const HomePage = () => {
   );
 
   return (
-    <div className="homepage">z
+    <div className="homepage">
       <div className="top-bar">
         <ThemeToggle />
         {!isLoggedIn ? (
@@ -122,7 +122,7 @@ const HomePage = () => {
       <h4 className="site-description">
         Welcome to Replate! Our missions is to reduce food waste while also making restaurant foods more affordable for people!
         You can browse through a variety of discounted foods near you, while reducing food waste at the same time!
-        </h4>
+      </h4>
 
 
       <div className="search-container">
