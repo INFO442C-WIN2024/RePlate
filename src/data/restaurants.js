@@ -25,9 +25,9 @@ export const restaurants = [
     categories: ["Korean"],
     dietary: [],
     menu: [
-      { id: 1, name: "Soft Tofu Soup", price: 13.99, description: "Spicy soft tofu soup with choice of protein" },
-      { id: 2, name: "Bibimbap", price: 14.99, description: "Mixed rice bowl with vegetables and egg" },
-      { id: 3, name: "Bulgogi", price: 16.99, description: "Marinated beef with rice" }
+      { id: 21, name: "Soft Tofu Soup", price: 13.99, description: "Spicy soft tofu soup with choice of protein" },
+      { id: 22, name: "Bibimbap", price: 14.99, description: "Mixed rice bowl with vegetables and egg" },
+      { id: 23, name: "Bulgogi", price: 16.99, description: "Marinated beef with rice" }
     ]
   },
   { 
@@ -36,14 +36,14 @@ export const restaurants = [
     name: "Manoushe Express", 
     image: "https://cookingorgeous.com/wp-content/uploads/2024/01/easy-homemade-lebanese-chicken-shawarma-20-500x500.jpg", 
     description: "Authentic Lebanese shawarma and manoushe flatbreads", 
-    location: "4234 University Way NE, Seattle",
+    location: "13721 Lake City Way NE, Seattle",
     categories: ["Middle Eastern", "Lebanese"],
     dietary: ["Halal"],
     menu: [
-      { id: 101, name: "Chicken Shawarma Wrap", price: 11.99, description: "Marinated chicken with garlic sauce and pickles" },
-      { id: 102, name: "Beef Shawarma Plate", price: 15.99, description: "Tender beef shawarma served with rice and hummus" },
-      { id: 103, name: "Zaatar Manoushe", price: 8.99, description: "Traditional Lebanese flatbread with zaatar herbs" },
-      { id: 104, name: "Falafel Wrap", price: 9.99, description: "Crispy falafel with tahini sauce and vegetables" }
+      { id: 31, name: "Chicken Shawarma Wrap", price: 11.99, description: "Marinated chicken with garlic sauce and pickles" },
+      { id: 32, name: "Beef Shawarma Plate", price: 15.99, description: "Tender beef shawarma served with rice and hummus" },
+      { id: 33, name: "Zaatar Manoushe", price: 8.99, description: "Traditional Lebanese flatbread with zaatar herbs" },
+      { id: 34, name: "Falafel Wrap", price: 9.99, description: "Crispy falafel with tahini sauce and vegetables" }
     ]
   },
   { 
@@ -56,10 +56,10 @@ export const restaurants = [
     categories: ["Japanese", "Sushi"],
     dietary: ["Vegetarian options"],
     menu: [
-      { id: 401, name: "California Roll", price: 8.99, description: "Crab, avocado, and cucumber" },
-      { id: 402, name: "Spicy Tuna Roll", price: 10.99, description: "Fresh tuna with spicy mayo" },
-      { id: 403, name: "Seattle Roll", price: 12.99, description: "Salmon, cream cheese, and avocado" },
-      { id: 404, name: "Bento Box", price: 16.99, description: "Teriyaki chicken, California roll, and gyoza" }
+      { id: 41, name: "California Roll", price: 8.99, description: "Crab, avocado, and cucumber" },
+      { id: 42, name: "Spicy Tuna Roll", price: 10.99, description: "Fresh tuna with spicy mayo" },
+      { id: 43, name: "Seattle Roll", price: 12.99, description: "Salmon, cream cheese, and avocado" },
+      { id: 44, name: "Bento Box", price: 16.99, description: "Teriyaki chicken, California roll, and gyoza" }
     ]
   },
   { 
@@ -68,19 +68,19 @@ export const restaurants = [
     name: "Bengal Tiger", 
     image: "https://www.allrecipes.com/thmb/SIgWrOI85-BlVbtGgUeew-77B7o=/0x512/filters:no_upscale():max_bytes(150000):strip_icc()/AR-141169-Easy-Indian-Butter-Chicken-DDMFS-4x3-beauty-588ff54d1e0f4a0788906e851e27d540.jpg", 
     description: "Authentic Bengali and Indian cuisine", 
-    location: "4214 University Way NE, Seattle",
+    location: "6509 Roosevelt Way NE, Seattle",
     categories: ["Indian", "Bengali"],
     dietary: ["Vegetarian", "Halal"],
     menu: [
-      { id: 501, name: "Chicken Tikka Masala", price: 15.99, description: "Creamy tomato curry with tender chicken" },
-      { id: 502, name: "Bengali Fish Curry", price: 17.99, description: "Traditional fish curry with mustard sauce" },
-      { id: 503, name: "Biryani", price: 16.99, description: "Aromatic rice dish with choice of protein" },
-      { id: 504, name: "Butter Naan", price: 3.99, description: "Fresh baked flatbread with butter" }
+      { id: 51, name: "Chicken Tikka Masala", price: 15.99, description: "Creamy tomato curry with tender chicken" },
+      { id: 52, name: "Bengali Fish Curry", price: 17.99, description: "Traditional fish curry with mustard sauce" },
+      { id: 53, name: "Biryani", price: 16.99, description: "Aromatic rice dish with choice of protein" },
+      { id: 54, name: "Butter Naan", price: 3.99, description: "Fresh baked flatbread with butter" }
     ]
   },
   
   { 
-    id: 5, 
+    id: 6, 
     slug: "jewel-of-india", 
     name: "Jewel of India", 
     image: "https://media-cdn.tripadvisor.com/media/photo-s/0a/52/ba/05/lunch-buffet.jpg",
@@ -89,13 +89,13 @@ export const restaurants = [
     categories: ["Indian"],
     dietary: ["Vegetarian", "Halal"],
     menu: [
-      { id: 501, name: "Chicken Tikka Masala", price: 15.99, description: "Creamy tomato curry with tender chicken" },
-      { id: 503, name: "Chicken Biryani", price: 16.99, description: "Aromatic rice dish with chicken" },
-      { id: 504, name: "Butter Naan", price: 3.99, description: "Fresh baked flatbread with butter" }
+      { id: 61, name: "Chicken Tikka Masala", price: 15.99, description: "Creamy tomato curry with tender chicken" },
+      { id: 62, name: "Chicken Biryani", price: 16.99, description: "Aromatic rice dish with chicken" },
+      { id: 63, name: "Butter Naan", price: 3.99, description: "Fresh baked flatbread with butter" }
     ]
   },
   { 
-    id: 6, 
+    id: 7, 
     slug: "church's-chicken", 
     name: "Church's Chicken", 
     image: "https://leitesculinaria.com/wp-content/uploads/2024/04/batter-fried-chicken-1200.jpg", 
@@ -104,14 +104,14 @@ export const restaurants = [
     categories: ["American", "Fried Chicken"],
     dietary: [],
     menu: [
-      { id: 401, name: "3 Piece Chicken Combo", price: 12.99, description: "3 pieces of chicken with sides and biscuit" },
-      { id: 402, name: "Spicy Chicken Sandwich", price: 7.99, description: "Crispy spicy chicken with pickles" },
-      { id: 403, name: "8 Piece Family Meal", price: 24.99, description: "8 pieces of chicken with large sides" },
-      { id: 404, name: "Honey Butter Biscuits (4)", price: 3.99, description: "Fresh baked biscuits with honey butter" }
+      { id: 71, name: "3 Piece Chicken Combo", price: 12.99, description: "3 pieces of chicken with sides and biscuit" },
+      { id: 72, name: "Spicy Chicken Sandwich", price: 7.99, description: "Crispy spicy chicken with pickles" },
+      { id: 73, name: "8 Piece Family Meal", price: 24.99, description: "8 pieces of chicken with large sides" },
+      { id: 74, name: "Honey Butter Biscuits (4)", price: 3.99, description: "Fresh baked biscuits with honey butter" }
     ]
   },
   { 
-    id: 7, 
+    id: 8, 
     slug: "halal-smash-burger", 
     name: "Halal Smash Burger", 
     image: "https://res.cloudinary.com/sagacity/image/upload/c_crop,h_3277,w_4915,x_0,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_1080/0523_Smash-That-Burger_Amber-Fouts_57A4049_ajwyvw.jpg", 
@@ -120,14 +120,14 @@ export const restaurants = [
     categories: ["American", "Burgers"],
     dietary: ["Halal"],
     menu: [
-      { id: 501, name: "Classic Smash", price: 9.99, description: "Smashed patty with cheese, lettuce, and special sauce" },
-      { id: 502, name: "Double Trouble", price: 13.99, description: "Double patty with double cheese and toppings" },
-      { id: 503, name: "Loaded Fries", price: 6.99, description: "Crispy fries with cheese sauce and jalapeños" },
-      { id: 504, name: "Chicken Sandwich", price: 10.99, description: "Crispy halal chicken with pickles and sauce" }
+      { id: 81, name: "Classic Smash", price: 9.99, description: "Smashed patty with cheese, lettuce, and special sauce" },
+      { id: 82, name: "Double Trouble", price: 13.99, description: "Double patty with double cheese and toppings" },
+      { id: 83, name: "Loaded Fries", price: 6.99, description: "Crispy fries with cheese sauce and jalapeños" },
+      { id: 84, name: "Chicken Sandwich", price: 10.99, description: "Crispy halal chicken with pickles and sauce" }
     ]
   },
   { 
-    id: 8, 
+    id: 9, 
     slug: "istanbul-shawarma", 
     name: "Istanbul Shawarma", 
     image: "https://s3-media0.fl.yelpcdn.com/bphoto/CG8yJb5ymdn3vWTB7NFu3A/348s.jpg", 
@@ -136,45 +136,45 @@ export const restaurants = [
     categories: ["Shawarma"],
     dietary: ["Halal"],
     menu: [
-      { id: 101, name: "Chicken Shawarma Wrap", price: 11.99, description: "Marinated chicken with garlic sauce and pickles" },
-      { id: 102, name: "Beef Shawarma Plate", price: 15.99, description: "Tender beef shawarma served with rice and hummus" },
-      { id: 104, name: "Falafel Wrap", price: 9.99, description: "Crispy falafel with tahini sauce and vegetables" }
+      { id: 91, name: "Chicken Shawarma Wrap", price: 11.99, description: "Marinated chicken with garlic sauce and pickles" },
+      { id: 92, name: "Beef Shawarma Plate", price: 15.99, description: "Tender beef shawarma served with rice and hummus" },
+      { id: 93, name: "Falafel Wrap", price: 9.99, description: "Crispy falafel with tahini sauce and vegetables" }
     ]
   },
   ,
   { 
-    id: 9, 
+    id: 10, 
     slug: "sushi-from-qFC-by-yummi", 
     name: "Sushi from QFC by Yummi", 
     image: "https://everydayglutenfreegourmet.ca/wp-content/uploads/2023/07/handmade-sushi-rolls.jpg", 
     description: "Fresh and delicious sushi made to order", 
-    location: "4525 University Way NE, Seattle",
+    location: "4500 Wallingford Ave N, Seattle",
     categories: ["Japanese", "Sushi"],
     dietary: ["Vegetarian options"],
     menu: [
-      { id: 901, name: "California Roll", price: 8.99, description: "Crab, avocado, and cucumber" },
-      { id: 902, name: "Spicy Tuna Roll", price: 10.99, description: "Fresh tuna with spicy mayo" },
-      { id: 903, name: "Japanese Bagel Roll", price: 12.99, description: "Salmon, cream cheese, and avocado" },
-      { id: 904, name: "Flyin' Hawaiian Salmon Poke Bowl", price: 16.99, description: "Salmon poke bowl with avocado, lettuce, and crispy onions" }
+      { id: 101, name: "California Roll", price: 8.99, description: "Crab, avocado, and cucumber" },
+      { id: 102, name: "Spicy Tuna Roll", price: 10.99, description: "Fresh tuna with spicy mayo" },
+      { id: 103, name: "Japanese Bagel Roll", price: 12.99, description: "Salmon, cream cheese, and avocado" },
+      { id: 104, name: "Flyin' Hawaiian Salmon Poke Bowl", price: 16.99, description: "Salmon poke bowl with avocado, lettuce, and crispy onions" }
     ]
   },
   { 
-    id: 10, 
+    id: 11, 
     slug: "pcc-fremont", 
     name: "PCC - Fremont", 
     image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/be/2d/62/pcc-natural-markets.jpg?w=900&h=500&s=1", 
     description: "Hot soup bar and sandwiches", 
-    location: "4525 University Way NE, Seattle",
+    location: "600 N 34th St, Seattle",
     categories: ["Soups", "Sandwiches", "Pizza"],
     dietary: ["Vegetarian options"],
     menu: [
-      { id: 1001, name: "Salmon cake and potato salad", price: 8.99, description: "Salmon cake and potato salad" },
-      { id: 1002, name: "Mozarella panini", price: 8.99, description: "Mozarella panini with pesto and tomatoes" }
+      { id: 111, name: "Salmon cake and potato salad", price: 8.99, description: "Salmon cake and potato salad" },
+      { id: 112, name: "Mozarella panini", price: 8.99, description: "Mozarella panini with pesto and tomatoes" }
     ]
   },
   
   { 
-    id: 10, 
+    id: 12, 
     slug: "whole-foods", 
     name: "Whole Foods", 
     image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/be/2d/62/pcc-natural-markets.jpg?w=900&h=500&s=1", 
@@ -183,10 +183,72 @@ export const restaurants = [
     categories: ["Soups", "Sandwiches", "Pizza"],
     dietary: ["Vegetarian options"],
     menu: [
-      { id: 1001, name: "Salmon cake and potato salad", price: 8.99, description: "Salmon cake and potato salad" },
-      { id: 1002, name: "Mozarella panini", price: 8.99, description: "Mozarella panini with pesto and tomatoes" }
+      { id: 121, name: "Salmon cake and potato salad", price: 8.99, description: "Salmon cake and potato salad" },
+      { id: 122, name: "Mozarella panini", price: 8.99, description: "Mozarella panini with pesto and tomatoes" }
     ]
-  }
+  },
+  { 
+    id: 13, 
+    slug: "cedars", 
+    name: "Cedars Restaurant", 
+    image: "https://media-cdn.tripadvisor.com/media/photo-s/0a/52/ba/05/lunch-buffet.jpg",
+    description: "Hot soup bar and sandwiches", 
+    location: "4525 University Way NE, Seattle",
+    categories: ["Soups", "Sandwiches", "Pizza"],
+    dietary: ["Halal"],
+    menu: [
+      { id: 131, name: "Chicken Tikka Masala", price: 15.99, description: "Creamy tomato curry with tender chicken" },
+      { id: 132, name: "Chicken Biryani", price: 16.99, description: "Aromatic rice dish with chicken" },
+      { id: 133, name: "Butter Naan", price: 3.99, description: "Fresh baked flatbread with butter" }
+    ]
+  },
+  { 
+    id: 14, 
+    slug: "shawarma-time", 
+    name: "Shawarma Time", 
+    image: "https://s3-media0.fl.yelpcdn.com/bphoto/CG8yJb5ymdn3vWTB7NFu3A/348s.jpg", 
+    description: "Shawarma, kebabs, and middle-eastern salads", 
+    location: "4525 University Way NE, Seattle",
+    categories: ["Middle Eastern"],
+    dietary: ["Halal"],
+    menu: [
+      { id: 141, name: "Chicken Shawarma Wrap", price: 11.99, description: "Marinated chicken with garlic sauce and pickles" },
+      { id: 142, name: "Beef Shawarma Plate", price: 15.99, description: "Tender beef shawarma served with rice and hummus" },
+      { id: 143, name: "Falafel Wrap", price: 9.99, description: "Crispy falafel with tahini sauce and vegetables" }
+    ]
+  },
+  { 
+    id: 15, 
+    slug: "aladdin", 
+    name: "Aladdin", 
+    image: "https://s3-media0.fl.yelpcdn.com/bphoto/CG8yJb5ymdn3vWTB7NFu3A/348s.jpg", 
+    description: "Hot soup bar and sandwiches", 
+    location: "4525 University Way NE, Seattle",
+    categories: ["Middle Eastern"],
+    dietary: ["Halal"],
+    menu: [
+      { id: 151, name: "Chicken Shawarma Wrap", price: 11.99, description: "Marinated chicken with garlic sauce and pickles" },
+      { id: 152, name: "Beef Shawarma Plate", price: 15.99, description: "Tender beef shawarma served with rice and hummus" },
+      { id: 153, name: "Falafel Wrap", price: 9.99, description: "Crispy falafel with tahini sauce and vegetables" }
+    ]
+  },
+  ,
+  
+  { 
+    id: 16, 
+    slug: "taste-of-india", 
+    name: "Taste of India", 
+    image: "https://media-cdn.tripadvisor.com/media/photo-s/0a/52/ba/05/lunch-buffet.jpg",
+    description: "Authentic Indian cuisine", 
+    location: "5517 Roosevelt Way NE, Seattle",
+    categories: ["Indian"],
+    dietary: ["Vegetarian", "Halal"],
+    menu: [
+      { id: 161, name: "Chicken Korma", price: 15.99, description: "Creamy cashew curry with tender chicken" },
+      { id: 162, name: "Lamb Biryani", price: 16.99, description: "Aromatic rice dish with lamb" },
+      { id: 163, name: "Butter Naan", price: 3.99, description: "Fresh baked flatbread with butter" }
+    ]
+  },
 ];
 
 export const filterCategories = [
