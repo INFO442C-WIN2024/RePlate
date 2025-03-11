@@ -21,21 +21,19 @@ let DefaultIcon = L.icon({
 L.Marker.prototype.options.icon = DefaultIcon;
 
 const MapView = () => {
-  const [selectedRestaurant, setSelectedRestaurant] = useState(null);
+  // Remove the unused state
+  // const [selectedRestaurant, setSelectedRestaurant] = useState(null);
 
-  // Convert string addresses to coordinates (you'll need to add real coordinates to your restaurant data)
-  const locations = restaurants.map(restaurant => ({
-    ...restaurant,
-    position: {
-      lat: 47.6616 + (Math.random() - 0.5) * 0.01, // Demo random positions
-      lng: -122.3132 + (Math.random() - 0.5) * 0.01
-    }
-  }));
-
+  // Center the map on the University District area
   const defaultCenter = {
-    lat: 47.6616, // Seattle UW area coordinates
+    lat: 47.6616,
     lng: -122.3132
   };
+
+  // Filter restaurants to only those with valid coordinates
+  const restaurantsWithCoordinates = restaurants.filter(
+    restaurant => restaurant.coordinates && restaurant.coordinates.lat && restaurant.coordinates.lng
+  );
 
   return (
     <div className="map-view">
@@ -47,7 +45,7 @@ const MapView = () => {
       
       <div className="map-container">
         <MapContainer 
-          center={defaultCenter} 
+          center={[defaultCenter.lat, defaultCenter.lng]} 
           zoom={14} 
           style={{ height: "calc(100vh - 120px)", width: "100%" }}
         >
@@ -55,13 +53,10 @@ const MapView = () => {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          {locations.map(restaurant => (
+          {restaurantsWithCoordinates.map(restaurant => (
             <Marker
               key={restaurant.id}
-              position={[restaurant.position.lat, restaurant.position.lng]}
-              eventHandlers={{
-                click: () => setSelectedRestaurant(restaurant),
-              }}
+              position={[restaurant.coordinates.lat, restaurant.coordinates.lng]}
             >
               <Popup>
                 <div className="map-popup">
@@ -73,7 +68,7 @@ const MapView = () => {
                   <h3>{restaurant.name}</h3>
                   <p>{restaurant.location}</p>
                   <Link 
-                    to={`/restaurant/${restaurant.id}`}
+                    to={`/restaurant/${restaurant.slug}`}
                     className="view-restaurant-button"
                   >
                     View Restaurant

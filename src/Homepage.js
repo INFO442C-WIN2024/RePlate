@@ -20,7 +20,7 @@ const HomePage = () => {
   const navigate = useNavigate();
   useEffect(() => {
     navigate('/restaurant');
-  }, []);
+  }, [navigate]);
 
 
   const handleFilterChange = (filterId) => {

@@ -4,8 +4,12 @@ export const restaurants = [
     slug: "shawarma-king", 
     name: "Shawarma King", 
     image: "https://images.seattletimes.com/wp-content/uploads/2024/09/09062024_kent_1306272.jpg?d=780x585", 
-    description: "Delicious middle-eastern meals.", 
-    location: "4350 University Ave, Seattle",
+    description: "Late-night counter-service spot serving shawarma, kebabs, gyros & falafel.", 
+    location: "4337 University Wy NE, Seattle",
+    coordinates: {
+      lat: 47.6616,
+      lng: -122.3132
+    },
     categories: ["Middle Eastern"],
     dietary: ["Halal"],
     menu: [
@@ -20,8 +24,12 @@ export const restaurants = [
     slug: "korean-tofu-house", 
     name: "Korean Tofu House", 
     image: "https://s3-media0.fl.yelpcdn.com/bphoto/0MrlQ4w_mH-nqbNXEJYONw/348s.jpg", 
-    description: "Delicious Korean meals.", 
+    description: "Quick-serve Korean eatery is a casual, college-town go-to for bibimbop, soups & BBQ.", 
     location: "4350 University Ave, Seattle",
+    coordinates: {
+      lat: 47.6619,
+      lng: -122.3127
+    },
     categories: ["Korean"],
     dietary: [],
     menu: [
@@ -37,6 +45,10 @@ export const restaurants = [
     image: "https://cookingorgeous.com/wp-content/uploads/2024/01/easy-homemade-lebanese-chicken-shawarma-20-500x500.jpg", 
     description: "Authentic Lebanese shawarma and manoushe flatbreads", 
     location: "13721 Lake City Way NE, Seattle",
+    coordinates: {
+      lat: 47.7284,
+      lng: -122.2911
+    },
     categories: ["Middle Eastern", "Lebanese"],
     dietary: ["Halal"],
     menu: [
@@ -52,7 +64,11 @@ export const restaurants = [
     name: "Sumo Express Sushi", 
     image: "https://everydayglutenfreegourmet.ca/wp-content/uploads/2023/07/handmade-sushi-rolls.jpg", 
     description: "Fresh and delicious sushi made to order", 
-    location: "4525 University Way NE, Seattle",
+    location: "5000 University Wy NE, Seattle",
+    coordinates: {
+      lat: 47.6658,
+      lng: -122.3129
+    },
     categories: ["Japanese", "Sushi"],
     dietary: ["Vegetarian options"],
     menu: [
@@ -69,6 +85,10 @@ export const restaurants = [
     image: "https://www.allrecipes.com/thmb/SIgWrOI85-BlVbtGgUeew-77B7o=/0x512/filters:no_upscale():max_bytes(150000):strip_icc()/AR-141169-Easy-Indian-Butter-Chicken-DDMFS-4x3-beauty-588ff54d1e0f4a0788906e851e27d540.jpg", 
     description: "Authentic Bengali and Indian cuisine", 
     location: "6509 Roosevelt Way NE, Seattle",
+    coordinates: {
+      lat: 47.6765,
+      lng: -122.3171
+    },
     categories: ["Indian", "Bengali"],
     dietary: ["Vegetarian", "Halal"],
     menu: [
@@ -86,6 +106,10 @@ export const restaurants = [
     image: "https://media-cdn.tripadvisor.com/media/photo-s/0a/52/ba/05/lunch-buffet.jpg",
     description: "Authentic Indian cuisine", 
     location: "4214 University Way NE, Seattle",
+    coordinates: {
+      lat: 47.6587,
+      lng: -122.3133
+    },
     categories: ["Indian"],
     dietary: ["Vegetarian", "Halal"],
     menu: [
@@ -101,6 +125,10 @@ export const restaurants = [
     image: "https://leitesculinaria.com/wp-content/uploads/2024/04/batter-fried-chicken-1200.jpg", 
     description: "Crispy, juicy fried chicken and southern sides", 
     location: "4555 University Way NE, Seattle",
+    coordinates: {
+      lat: 47.6632,
+      lng: -122.3127
+    },
     categories: ["American", "Fried Chicken"],
     dietary: [],
     menu: [
@@ -117,6 +145,10 @@ export const restaurants = [
     image: "https://res.cloudinary.com/sagacity/image/upload/c_crop,h_3277,w_4915,x_0,y_0/c_limit,dpr_auto,f_auto,fl_lossy,q_80,w_1080/0523_Smash-That-Burger_Amber-Fouts_57A4049_ajwyvw.jpg", 
     description: "Halal certified smashed burgers and fries", 
     location: "4299 University Way NE, Seattle",
+    coordinates: {
+      lat: 47.6601,
+      lng: -122.3132
+    },
     categories: ["American", "Burgers"],
     dietary: ["Halal"],
     menu: [
@@ -132,7 +164,11 @@ export const restaurants = [
     name: "Istanbul Shawarma", 
     image: "https://s3-media0.fl.yelpcdn.com/bphoto/CG8yJb5ymdn3vWTB7NFu3A/348s.jpg", 
     description: "Turkish shawarma and manoushe flatbreads.", 
-    location: "4299 University Way NE, Seattle",
+    location: "4337 University Way NE, Seattle",
+    coordinates: {
+      lat: 47.6616,
+      lng: -122.3132
+    },
     categories: ["Shawarma"],
     dietary: ["Halal"],
     menu: [
@@ -144,11 +180,15 @@ export const restaurants = [
   ,
   { 
     id: 10, 
-    slug: "sushi-from-qFC-by-yummi", 
+    slug: "sushi-qfc-yummi", 
     name: "Sushi from QFC by Yummi", 
     image: "https://everydayglutenfreegourmet.ca/wp-content/uploads/2023/07/handmade-sushi-rolls.jpg", 
     description: "Fresh and delicious sushi made to order", 
-    location: "4500 Wallingford Ave N, Seattle",
+    location: "600 N 34th St, Seattle",
+    coordinates: {
+      lat: 47.6494,
+      lng: -122.3470
+    },
     categories: ["Japanese", "Sushi"],
     dietary: ["Vegetarian options"],
     menu: [
@@ -165,6 +205,10 @@ export const restaurants = [
     image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/be/2d/62/pcc-natural-markets.jpg?w=900&h=500&s=1", 
     description: "Hot soup bar and sandwiches", 
     location: "600 N 34th St, Seattle",
+    coordinates: {
+      lat: 47.6494,
+      lng: -122.3470
+    },
     categories: ["Soups", "Sandwiches", "Pizza"],
     dietary: ["Vegetarian options"],
     menu: [
@@ -179,7 +223,11 @@ export const restaurants = [
     name: "Whole Foods", 
     image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/be/2d/62/pcc-natural-markets.jpg?w=900&h=500&s=1", 
     description: "Hot soup bar and sandwiches", 
-    location: "4525 University Way NE, Seattle",
+    location: "1026 NE 64th St, Seattle",
+    coordinates: {
+      lat: 47.6765,
+      lng: -122.3171
+    },
     categories: ["Soups", "Sandwiches", "Pizza"],
     dietary: ["Vegetarian options"],
     menu: [
@@ -193,7 +241,11 @@ export const restaurants = [
     name: "Cedars Restaurant", 
     image: "https://media-cdn.tripadvisor.com/media/photo-s/0a/52/ba/05/lunch-buffet.jpg",
     description: "Hot soup bar and sandwiches", 
-    location: "4525 University Way NE, Seattle",
+    location: "4759 Brooklyn Ave NE, Seattle",
+    coordinates: {
+      lat: 47.6642,
+      lng: -122.3142
+    },
     categories: ["Soups", "Sandwiches", "Pizza"],
     dietary: ["Halal"],
     menu: [
@@ -208,7 +260,7 @@ export const restaurants = [
     name: "Shawarma Time", 
     image: "https://s3-media0.fl.yelpcdn.com/bphoto/CG8yJb5ymdn3vWTB7NFu3A/348s.jpg", 
     description: "Shawarma, kebabs, and middle-eastern salads", 
-    location: "4525 University Way NE, Seattle",
+    location: "4701 Roosevelt Way NE, Seattle",
     categories: ["Middle Eastern"],
     dietary: ["Halal"],
     menu: [
@@ -232,8 +284,6 @@ export const restaurants = [
       { id: 153, name: "Falafel Wrap", price: 9.99, description: "Crispy falafel with tahini sauce and vegetables" }
     ]
   },
-  ,
-  
   { 
     id: 16, 
     slug: "taste-of-india", 
@@ -241,6 +291,10 @@ export const restaurants = [
     image: "https://media-cdn.tripadvisor.com/media/photo-s/0a/52/ba/05/lunch-buffet.jpg",
     description: "Authentic Indian cuisine", 
     location: "5517 Roosevelt Way NE, Seattle",
+    coordinates: {
+      lat: 47.6685,
+      lng: -122.3171
+    },
     categories: ["Indian"],
     dietary: ["Vegetarian", "Halal"],
     menu: [
@@ -248,7 +302,7 @@ export const restaurants = [
       { id: 162, name: "Lamb Biryani", price: 16.99, description: "Aromatic rice dish with lamb" },
       { id: 163, name: "Butter Naan", price: 3.99, description: "Fresh baked flatbread with butter" }
     ]
-  },
+  }
 ];
 
 export const filterCategories = [

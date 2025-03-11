@@ -58,7 +58,12 @@ function LoginForm() {
               <input type="checkbox" id="remember" className="checkbox" />
               <label htmlFor="remember">Remember Me</label>
             </div>
-            <a href="#" className="forgot-password">Forgot Password?</a>
+            <button 
+              className="forgot-password link-button" 
+              onClick={() => alert('Password reset functionality coming soon!')}
+            >
+              Forgot Password?
+            </button>
           </div>
           <button type="submit" className="login-button">Login</button>
         </form>

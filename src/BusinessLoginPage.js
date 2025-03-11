@@ -49,7 +49,9 @@ function BusinessLoginForm() {
 
 
                 </form>
-                <a href="#">Forgot Password?</a>
+                <button className="link-button" onClick={() => alert('Password reset functionality coming soon!')}>
+                    Forgot Password?
+                </button>
                 <Link to="/businesssignup">
                     <button className="signup-button">Create a Storefront</button>
                 </Link>
