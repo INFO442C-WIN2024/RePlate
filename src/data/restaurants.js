@@ -62,7 +62,7 @@ export const restaurants = [
     id: 4, 
     slug: "sumo-express-sushi", 
     name: "Sumo Express Sushi", 
-    image: "https://everydayglutenfreegourmet.ca/wp-content/uploads/2023/07/handmade-sushi-rolls.jpg", 
+    image: "https://s3-media0.fl.yelpcdn.com/bphoto/fMrHzWWl4GBhM3P2Y7ioPw/348s.jpg", 
     description: "Fresh and delicious sushi made to order", 
     location: "5000 University Wy NE, Seattle",
     coordinates: {
@@ -162,7 +162,7 @@ export const restaurants = [
     id: 9, 
     slug: "istanbul-shawarma", 
     name: "Istanbul Shawarma", 
-    image: "https://s3-media0.fl.yelpcdn.com/bphoto/CG8yJb5ymdn3vWTB7NFu3A/348s.jpg", 
+    image: "https://www.assemblyfoodhall.com/uploads/sites/3/2020/03/DSC_0243-min-1.jpg", 
     description: "Turkish shawarma and manoushe flatbreads.", 
     location: "4337 University Way NE, Seattle",
     coordinates: {
@@ -239,7 +239,7 @@ export const restaurants = [
     id: 13, 
     slug: "cedars", 
     name: "Cedars Restaurant", 
-    image: "https://media-cdn.tripadvisor.com/media/photo-s/0a/52/ba/05/lunch-buffet.jpg",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShkmiZD-NvGgXpzt6CNVew-S_aVx_8_SHuMQ&s",
     description: "Hot soup bar and sandwiches", 
     location: "4759 Brooklyn Ave NE, Seattle",
     coordinates: {
@@ -273,7 +273,7 @@ export const restaurants = [
     id: 15, 
     slug: "aladdin", 
     name: "Aladdin", 
-    image: "https://s3-media0.fl.yelpcdn.com/bphoto/CG8yJb5ymdn3vWTB7NFu3A/348s.jpg", 
+    image: "https://www.fbgcdn.com/pictures/eafa7c93-23ca-4fec-8a19-df2ecac86bad.jpg", 
     description: "Hot soup bar and sandwiches", 
     location: "4525 University Way NE, Seattle",
     categories: ["Middle Eastern"],
@@ -288,7 +288,7 @@ export const restaurants = [
     id: 16, 
     slug: "taste-of-india", 
     name: "Taste of India", 
-    image: "https://media-cdn.tripadvisor.com/media/photo-s/0a/52/ba/05/lunch-buffet.jpg",
+    image: "https://popmenucloud.com/cdn-cgi/image/width%3D1200%2Cheight%3D1200%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/vjduofrx/9ab66560-e81a-44bb-a32c-e5d74133cf99.jpg",
     description: "Authentic Indian cuisine", 
     location: "5517 Roosevelt Way NE, Seattle",
     coordinates: {
